@@ -35,6 +35,7 @@ createFormMethod(){
   })
 }
 add(){
+  10.1.73.171:8080/contract/createContract
   Swal.fire('Success', 'Contract Created!', 'success')
   this._baseService.tableArray.push(this.createForm.value)
 }
