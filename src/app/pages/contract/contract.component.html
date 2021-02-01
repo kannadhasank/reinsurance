@@ -7,15 +7,20 @@
       <div class="card-box pt-2">
 
         <div class="row mb-2">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <h4 class="header-title pt-1">Contract</h4>
           </div>
-          <div class="col-md-6 text-right">
-            <button type="button" class="btn  btn-dark  mr-2" data-toggle="modal" data-target="#newContrctPop">Create New
-              Contract</button>
+          <div class="col-md-8 text-right">
+            <button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#newContrctPop">Create New Contract
+            </button>
+            <button type="button" class="btn btn-purple mr-2" data-toggle="modal" data-target="#copy-contract-modal">Copy
+              Contract
+            </button>
+            
+            <button type="button" class="btn btn-primary " (click)="_baseService.currentActiveContent='new_contract'; _baseService.showRightSideBar()">Search
+              Contract
+            </button>
 
-            <button type="button" class="btn  btn-primary " (click)="_baseService.currentActiveContent='new_contract'; _baseService.showRightSideBar()">Search
-              Contract</button>
           </div>
         </div>
         <hr>
@@ -38,33 +43,33 @@
                   </tr>
                 </thead>
                 <tbody>
-                    <tr >
-                        <td class="font-weight-500">CPP-CT-</td>
-                        <td> <span class="badge badge-dark p-1">2020</span></td>
-                        <td>FORM-001</td>
-    
-                        <td class="font-weight-500">Equiipment Breakdown - CPP</td>
-                        <td>
-                          <span class="badge badge-warning p-1">12-12-2020</span>
-                        </td>
-    
-                        <td>
-                          <span class="badge badge-primary p-1">12-12-2021</span>
-                        </td>
-    
-                        <td>
-                          <span class="badge badge-success p-1" >Active</span>
-                        </td>
-    
-                        <!-- <td class="text-center width_14">
+                  <tr>
+                    <td class="font-weight-500">CPP-CT-</td>
+                    <td> <span class="badge badge-dark p-1">2020</span></td>
+                    <td>FORM-001</td>
+
+                    <td class="font-weight-500">Equiipment Breakdown - CPP</td>
+                    <td>
+                      <span class="badge badge-warning p-1">12-12-2020</span>
+                    </td>
+
+                    <td>
+                      <span class="badge badge-primary p-1">12-12-2021</span>
+                    </td>
+
+                    <td>
+                      <span class="badge badge-success p-1">Active</span>
+                    </td>
+
+                    <!-- <td class="text-center width_14">
                             <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary mr-2"> View Contract
                             </a>
                             <button type="button" class="btn btn-sm btn-outline-primary mr-2" (click)="delete(i)"
                              >
                               Delete </button>
                           </td> -->
-                        <td>
-                          <!-- <div>
+                    <td>
+                      <!-- <div>
                             <popover-content #myPopover class="justify-content-center">
                               <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary m-1"> View Contract
                               </a>
@@ -80,21 +85,23 @@
                             </popover-content>
                             <i class="fa fa-ellipsis-h" [popover]="myPopover" [popoverOnHover]="false" aria-hidden="true"></i>
                           </div> -->
-                          <div class="btn-group dropdown">
-                              <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                  <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
-                                  <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
-                                  <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
-                                  <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
-                                  <a  class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle" ></i>Delete</a>
-                              </div>
-                          </div>
-    
-                        </td>
-    
-                      </tr>
-<!-- ------------------------------- -->
+                      <div class="btn-group dropdown">
+                        <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                            class="mdi mdi-dots-horizontal"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a>
+                          <a data-toggle="modal" data-target="#copy-renew-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-refresh mr-2 font-18 text-muted vertical-middle"></i>Renew Contract</a>
+                        </div>
+                      </div>
+
+                    </td>
+
+                  </tr>
+                  <!-- ------------------------------- -->
                   <tr *ngFor="let item of _baseService.tableArray; let i=index;  let odd=odd;  let even=even;">
                     <td class="font-weight-500">HTC-CT-{{i+1}}</td>
                     <td> <span class="badge badge-dark p-1">2020</span></td>
@@ -139,14 +146,16 @@
                         <i class="fa fa-ellipsis-h" [popover]="myPopover" [popoverOnHover]="false" aria-hidden="true"></i>
                       </div> -->
                       <div class="btn-group dropdown">
-                          <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
-                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
-                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
-                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
-                              <a (click)="delete(i)" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle" ></i>Delete</a>
-                          </div>
+                        <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                            class="mdi mdi-dots-horizontal"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
+                          <a (click)="delete(i)" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a>
+                          <a data-toggle="modal" data-target="#copy-renew-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Renew Contract</a>
+                        </div>
                       </div>
 
                     </td>
@@ -209,7 +218,16 @@
   </div>
 </ng-container>
 
-
+<ng-container>
+  <div id="copy-contract-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <app-copy-contract></app-copy-contract>
+  </div>
+</ng-container>
+<ng-container>
+    <div id="copy-renew-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+     <app-renew-contract></app-renew-contract>
+    </div>
+  </ng-container>
 
 
 <!-- popover with dynamic html content -->

@@ -30,12 +30,7 @@
                     <div class="row">
                         <div class="col-sm-2">
                             <div class="nav flex-column nav-pills tabs-vertical" role="tablist" aria-orientation="vertical">
-                                    <a class="nav-link mb-1 btn btn-outline-primary"  data-toggle="pill" href="" role="tab" aria-controls="v-home" aria-selected="true">
-                                            <span class="d-inline-block">Add Layer</span>
-                                        </a>
-                                        <a class="nav-link mb-1 btn btn-outline-primary"  data-toggle="pill" href="" role="tab" aria-controls="v-home" aria-selected="true">
-                                                <span class="d-inline-block">Copy Layer</span>
-                                            </a>
+                                    
                                 <a class="nav-link mb-1 active" id="v-home-tab" data-toggle="pill" href="#v-home" role="tab" aria-controls="v-home" aria-selected="true">
                                     <span class="d-inline-block">Layer 1</span>
                                 </a>
@@ -56,6 +51,8 @@
                                         <div class="row mb-2">
                                                 
                                                 <div class="col-md-12 text-right">
+                                                        <button type="button" class="btn btn-primary mr-2" >
+                                                                Add New Layer</button>
                                                   <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#newContrctPop">
                                                     Participant</button>
                                       
@@ -79,8 +76,12 @@
                                        
                                 </div>
                             </div>
+                          
+                            
                         </div>
+                        
                     </div>
+                    
                 </div>
                 
             
@@ -93,6 +94,7 @@
      <app-participant-summary></app-participant-summary>
       <!-- /.modal-dialog -->
     </div>
+    
   </ng-container>
   <ng-container>
     <div id="guideline" class="modal fade ticket-dialog" tabindex="-1" role="dialog" aria-hidden="true">
@@ -112,7 +114,7 @@
       <!-- /.modal-dialog -->
     </div>
   </ng-container>
-
+  
 
 
   

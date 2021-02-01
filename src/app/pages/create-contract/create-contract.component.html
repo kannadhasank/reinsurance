@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-3">
               <label for="emailaddress">Contract Type <span class="text-danger">*</span></label>
-              <select class="form-control" formControlName="ContractAffiliate" placeholder="Common area maintenance">
+              <select class="form-control" formControlName="ContractAffiliate" placeholder="">
                 <option> Select Contract Type</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
@@ -90,7 +90,7 @@
          
           <div class="form-group row mb-0">
            
-            <div class="col-3 form-group date-picker">
+            <!-- <div class="col-3 form-group date-picker">
               <label for="emailaddress">Aniversary Date</label>
               <div class="input-group">
                 <input type="date" id="date-ticket" formControlName="ContractAffiliate" name="Contract-Name" >
@@ -99,13 +99,22 @@
             <div class="col-3">
               <label for="emailaddress">Signature Date <span class="text-danger">*</span></label>
               <input type="date" class="form-control"  formControlName="ContractAffiliate" id="date-ticket" name="date-ticket" >
-            </div>
+            </div> -->
             <div class="col-3 requestType mt-4">
               <div class="custom-control custom-checkbox">
                   <input type="checkbox" formControlName="ContractAffiliate" class="custom-control-input" id="customCheck1">
                   <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
                 </div>
           </div>
+          <div class="col-3 requestType">
+            <label for="Layer-12">Aggregated Claim Method</label>
+            <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method">
+                <option>Select Aggregated Claim Method</option>
+                <option> Option 1</option>
+                <option> Option 2</option>
+                <option> Option 3</option>
+              </select>
+        </div>
           </div>
 
           <div class="form-group row mb-0">
@@ -113,7 +122,7 @@
            
           </div>
 
-          <div class="card-box">
+          <!-- <div class="card-box">
               <h4 class="header-title mb-4">Billing Compilation</h4>    
 <div class="form-group row request-types">
   <div class="col-6">
@@ -152,7 +161,7 @@
 </div>
 </div>
 
-</div>
+</div> -->
 
 
 
@@ -162,7 +171,7 @@
       <h4 class="header-title pt-1"></h4>
     </div>
     <div class="col-md-6 text-right">
-        <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button>
+        <!-- <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button> -->
 
       <button type="button" class="btn btn-orange  mr-2" data-dismiss="modal" (click)="add()">Create Contract</button>
 

@@ -9,16 +9,26 @@
             <label for="Layer-2">Layer # </label>
             <input type="text" readonly class="form-control" id="Layer-2" value="LAR0001" name="Layer-2">
         </div>
-        <div class="col-3 form-group">
+        <!-- <div class="col-3 form-group">
             <label for="Layer-3" class="text-danger">U/W Year</label>
             <input type="text" class="form-control" id="Layer-3" name="Layer-3">
-        </div>
+        </div> -->
         <div class="col-3 form-group">
-            <div class="custom-control custom-checkbox">
+            <div class="custom-control custom-checkbox mt-3">
                 <input type="checkbox"  class="custom-control-input" id="Layer-4">
-                <label class="custom-control-label" for="Layer-4">IBNR Excluded</label>
+                <label class="custom-control-label" for="Layer-4">IBNR&nbsp;Excluded</label>
               </div>
         </div>
+        <!-- <div class="col-3">
+            <div class="custom-control custom-checkbox mt-3">
+                <input type="checkbox"  class="custom-control-input" id="Layer-12">
+                <label class="custom-control-label" for="Layer-12">Keep&nbsp;as&nbsp;Original</label>
+              </div>
+        </div> -->
+        <div class="col-3">
+                <label for="Layer-10">Deposit Premium</label>
+               <input type="text" class="form-control" id="Layer-10" name="Layer-10">
+            </div>
     </div>
 
     <div class="form-group row textarea-desc mb-0">
@@ -73,18 +83,13 @@
             <label for="Layer-10">Contract Issue Date</label>
            <input type="text" class="form-control" id="Layer-10" name="Layer-10">
         </div>
-        <div class="col-3 form-group">
+        <!-- <div class="col-3 form-group">
             <label for="Layer-11" class="text-danger">Former Code</label>
             <input type="text" class="form-control" id="Layer-11" name="Layer-11">
-        </div>
-        <div class="col-3">
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox"  class="custom-control-input" id="Layer-12">
-                <label class="custom-control-label" for="Layer-12">Keep as Original</label>
-              </div>
-        </div>
+        </div> -->
+       
     </div>
-    <div class="form-group row textarea-desc mb-0">
+    <!-- <div class="form-group row textarea-desc mb-0">
     <div class="col-3 form-group">
         <label for="Layer-13" class="text-danger">Profit Center </label>
         <select class="form-control" id="Layer-13" placeholder="lProfit Center">
@@ -112,7 +117,7 @@
             <option> Option 3</option>
           </select>
     </div>
-</div>
+</div> -->
 <div class="card-box">
     <h4 class="header-title mb-4">Allocation Method</h4>
     <div class="form-group row mb-0 mt-2">
@@ -150,5 +155,17 @@
         </div>
        
     </div>
+    <div class="row mb-2">
+        <div class="col-md-6">
+          <h4 class="header-title pt-1"></h4>
+        </div>
+        <div class="col-md-6 text-right">
+            <!-- <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button> -->
+    
+          <button type="button" class="btn btn-orange  mr-2" >Delete Layer</button>
+    
+          <button type="button" class="btn btn-secondary"  >Copy Layer</button>
+        </div>
+      </div>
 </div>
 </form>

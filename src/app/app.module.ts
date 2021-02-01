@@ -45,6 +45,10 @@ import { AddParticipantComponent } from './participants-master/add-participant/a
 import { ReinsurerComponent } from './participants-master/reinsurer/reinsurer.component';
 import { ContactPreferenceComponent } from './participants-master/contact-preference/contact-preference.component';
 import { ContactComponent } from './participants-master/contact/contact.component';
+import { CliamSummaryComponent } from './claim/cliam-summary/cliam-summary.component';
+import { CliamCreateComponent } from './claim/cliam-create/cliam-create.component';
+import { CopyContractComponent } from './pages/copy-contract/copy-contract.component';
+import { RenewContractComponent } from './pages/renew-contract/renew-contract.component';
 
 
 
@@ -88,7 +92,11 @@ import { ContactComponent } from './participants-master/contact/contact.componen
     AddParticipantComponent,
     ReinsurerComponent,
     ContactPreferenceComponent,
-    ContactComponent
+    ContactComponent,
+    CliamSummaryComponent,
+    CliamCreateComponent,
+    CopyContractComponent,
+    RenewContractComponent
   ],
   imports: [
     BrowserModule,

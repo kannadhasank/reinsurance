@@ -8,6 +8,7 @@ import { ContractComponent } from './pages/contract/contract.component';
 import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.component';
 import { Contrac2Component } from './contrac2/contrac2.component';
 import { ParticipantsMasterComponent } from './pages/participants-master/participants-master.component';
+import { CliamSummaryComponent } from './claim/cliam-summary/cliam-summary.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full'  },
@@ -16,7 +17,8 @@ const routes: Routes = [
     { path: 'contract', component: ContractComponent },
     { path: 'Layer', component: LayerSummaryComponent },
     { path: 'contract2', component: Contrac2Component },
-    { path: 'participants', component: ParticipantsMasterComponent }
+    { path: 'participants', component: ParticipantsMasterComponent },
+    { path: 'claim-summary', component: CliamSummaryComponent }
   ] },
  
 ];
