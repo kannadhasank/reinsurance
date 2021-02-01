@@ -49,7 +49,7 @@ import { CliamSummaryComponent } from './claim/cliam-summary/cliam-summary.compo
 import { CliamCreateComponent } from './claim/cliam-create/cliam-create.component';
 import { CopyContractComponent } from './pages/copy-contract/copy-contract.component';
 import { RenewContractComponent } from './pages/renew-contract/renew-contract.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -104,7 +104,8 @@ import { RenewContractComponent } from './pages/renew-contract/renew-contract.co
     FormsModule,
     ReactiveFormsModule,
     PopoverModule,
-    DataTablesModule
+    DataTablesModule,
+    HttpClientModule
     
   ],
   providers: [],

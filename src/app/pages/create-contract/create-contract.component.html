@@ -11,7 +11,7 @@
           <div class="form-group row request-types">
             <div class="col-md-6 requestType">
               <label for="username">Contract Affiliate <span class="text-danger">*</span></label>
-              <select class="form-control" formControlName="ContractAffiliate" placeholder="Common area maintenance">
+              <select class="form-control" formControlName="affiliateID" placeholder="Common area maintenance">
                 <option> Contract Affiliate</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-3">
               <label for="emailaddress">Contract Type <span class="text-danger">*</span></label>
-              <select class="form-control" formControlName="ContractType" placeholder="">
+              <select class="form-control" formControlName="contractTypeID" placeholder="">
                 <option> Select Contract Type</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-3">
               <label for="emailaddress">Contract Code <span class="text-danger">*</span></label>
-              <input type="text" class="form-control" formControlName="ContractCode" id="date-ticket" name="date-ticket" >
+              <input type="text" class="form-control" formControlName="contractCode" id="date-ticket" name="date-ticket" >
             </div>
             <!-- <div class="col-md-3">
               <label for="emailaddress" class="text-danger">Business Group</label>
@@ -66,7 +66,7 @@
               <label for="emailaddress">Contract Name <span class="text-danger">*</span></label>
 
               <div class="input-group">
-                <input type="text" id="date-ticket" formControlName="ContractName" name="Contract-Name" >
+                <input type="text" id="date-ticket" formControlName="contractName" name="Contract-Name" >
               </div>
             </div>
             <div class="col-3 requestType">
@@ -80,11 +80,11 @@
             </div>
             <div class="col-3">
               <label for="emailaddress">Effective Date <span class="text-danger">*</span></label>
-              <input type="date" class="form-control" id="date-ticket" name="date-ticket" formControlName="EffectiveDate">
+              <input type="date" class="form-control" id="date-ticket" name="date-ticket" formControlName="effectiveDate">
             </div>
             <div class="col-3">
               <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
-              <input type="date" class="form-control" formControlName="ExpirationDate" id="date-ticket" name="date-ticket" >
+              <input type="date" class="form-control" formControlName="expirationDate" id="date-ticket" name="date-ticket" >
             </div>
           </div>
          
@@ -102,7 +102,7 @@
             </div> -->
             <div class="col-3 requestType mt-4">
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" formControlName="IBNRExcluded" class="custom-control-input" id="customCheck1">
+                  <input type="checkbox" formControlName="ibnrExclusionFlag" class="custom-control-input" id="customCheck1">
                   <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
                 </div>
           </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { BaseService } from '../../shared/base.service';
 import Swal from 'sweetalert2'
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class CreateContractComponent implements OnInit {
   
 public createForm: FormGroup;
 
-  constructor(public Fb: FormBuilder,public _baseService: BaseService) { }
+  constructor(public Fb: FormBuilder,public _baseService: BaseService, public http:HttpClient) { }
 
   ngOnInit(): void {
   this.createFormMethod()
@@ -35,8 +36,11 @@ createFormMethod(){
   })
 }
 add(){
-  10.1.73.171:8080/contract/createContract
+  
   Swal.fire('Success', 'Contract Created!', 'success')
   this._baseService.tableArray.push(this.createForm.value)
+  this.http.post('10.1.73.171:8080/contract/createContract',this.createForm.value).subscribe(x=>{
+    
+  })
 }
 }
