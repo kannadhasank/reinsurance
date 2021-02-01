@@ -24,17 +24,14 @@ createFormMethod(){
  return this.createForm = this.Fb.group({
     ContractAffiliate : new FormControl(''),
     ContractType : new FormControl(''),
-    BusinessGroup : new FormControl(''),
     ContractCode : new FormControl(''),
     ContractName : new FormControl(''),
     RenewalType : new FormControl(''),
     IBNRExcluded : new FormControl(''),
     EffectiveDate : new FormControl(''),
-    UWYear : new FormControl(''),
     ExpirationDate : new FormControl(''),
-    AniversaryDate : new FormControl(''),
-    SignatureDate : new FormControl(''),
-    Template : new FormControl(''),
+    Aggregated : new FormControl(''),
+    
   })
 }
 add(){
