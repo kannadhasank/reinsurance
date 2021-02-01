@@ -22,14 +22,14 @@ public createForm: FormGroup;
 
 createFormMethod(){
  return this.createForm = this.Fb.group({
-    ContractAffiliate : new FormControl(''),
-    ContractType : new FormControl(''),
-    ContractCode : new FormControl(''),
-    ContractName : new FormControl(''),
-    RenewalType : new FormControl(''),
-    IBNRExcluded : new FormControl(''),
-    EffectiveDate : new FormControl(''),
-    ExpirationDate : new FormControl(''),
+  affiliateID : new FormControl(''),
+  contractTypeID : new FormControl(''),
+  contractCode : new FormControl(''),
+  contractName : new FormControl(''),
+  renewalTypeCode : new FormControl(''),
+  ibnrExclusionFlag : new FormControl(''),
+  effectiveDate : new FormControl(''),
+  expirationDate : new FormControl(''),
     Aggregated : new FormControl(''),
     
   })

@@ -33,18 +33,19 @@
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js", 
+              "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/datatables.net/js/jquery.dataTables.js"
-              
             ]
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -53,7 +54,8 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
+              "budgets": [
+                {
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -129,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "project1"
+  "defaultProject": "project1",
+  "cli": {
+    "analytics": "1eb1c303-f569-4c54-8f03-dd2b6cf7002b"
+  }
 }
