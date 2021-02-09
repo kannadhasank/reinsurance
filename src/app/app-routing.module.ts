@@ -9,6 +9,10 @@ import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.compo
 import { Contrac2Component } from './contrac2/contrac2.component';
 import { ParticipantsMasterComponent } from './pages/participants-master/participants-master.component';
 import { CliamSummaryComponent } from './claim/cliam-summary/cliam-summary.component';
+import { ParticipantSummaryComponent } from './layers/participant-summary/participant-summary.component';
+import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-guide.component';
+import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
+import { TermsComponent } from './layers/terms/terms.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full'  },
@@ -18,7 +22,11 @@ const routes: Routes = [
     { path: 'Layer', component: LayerSummaryComponent },
     { path: 'contract2', component: Contrac2Component },
     { path: 'participants', component: ParticipantsMasterComponent },
-    { path: 'claim-summary', component: CliamSummaryComponent }
+    { path: 'claim-summary', component: CliamSummaryComponent },
+    { path: 'participant', component: ParticipantSummaryComponent },
+    {path: 'attachment', component: AttachmentGuideComponent},
+    {path: 'namedInsured', component: NamedInsuredComponent},
+    {path: 'terms',component: TermsComponent}
   ] },
  
 ];
