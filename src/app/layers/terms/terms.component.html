@@ -1,0 +1,108 @@
+    <div class="modal-content mt-3">
+        <div class="modal-header">
+            <h4 class="modal-title text-center" id="myModalLabel">Contents Of Terms</h4>
+            <h4 class="text-center"><button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#newContrctPop">Add Terms
+            </button></h4>
+        </div>
+        <div class="modal-body ">
+
+            <form class="form-horizontal" >
+
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="table-responsive">
+
+                            <table class="table table-hover mb-5">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="width_14">Term Name</th>
+                                        <th class="">Effective Date</th>
+                                        <th class="width_14">Expiration Date</th>
+                                        <th class="width_14">Endorsement Change date</th>
+                                        <th class="width_14">Endorsement Id</th>
+                                        <th class="width_14">Endorsement Sign date</th>
+                                       <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Accounting</td>
+                                        <td>1-1-2020</td>
+                                        <td>1-1-2020</td>
+                                        <td>1-1-2020</td>
+                                        <td>New</td>
+                                        <td> 1-1-2020</td>
+                                        <td> <div class="btn-group dropdown">
+                                            <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                                class="mdi mdi-dots-horizontal"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Delete</a>
+                                            </div>
+                                          </div></td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Claim</td>
+                                        <td>1-1-2020</td>
+                                        <td>1-1-2020</td>
+                                        <td>1-1-2020</td>
+                                        <td>New</td>
+                                        <td> 1-1-2020</td>
+                                        <td> <div class="btn-group dropdown">
+                                            <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                                class="mdi mdi-dots-horizontal"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Delete</a>
+                                            </div>
+                                          </div></td>    
+                                    </tr>
+                                    <!-- ------------------------------- -->
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+
+    <ng-container>
+        <div id="newContrctPop" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Terms</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="field-3" class="control-label">Terms</label>
+                                    <select class="form-control" placeholder="Contract Name">
+                                        <option> Select Terms Name</option>
+                                        <option> Option 1</option>
+                                        <option> Option 2</option>
+                                        <option> Option 3</option>
+                                    </select> </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info waves-effect waves-light">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </ng-container>
+

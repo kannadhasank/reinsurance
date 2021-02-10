@@ -1,0 +1,76 @@
+<div class="">
+
+    <div class="col-12 top-section">
+        <div class="alignleft">
+            <div class="close-icon">
+                <a href="javascript:void(0);" (click)="_baseService.currentActiveContent=''; _baseService.closeRightSideBar();" class="float-right right_bar_close">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+            <div class="schedule-id form_title">
+                <strong *ngIf="_baseService.currentActiveContent=='new_contract'">Contract Looping</strong>
+            </div>
+        </div>
+        <div class="alignright">
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Add Property Start -->
+
+    <div class="card-box">
+
+        <ul class="nav nav-tabs tabs-bordered">
+            <li class="nav-item">
+                <a href="#home-b1" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                    <span class="d-block d-sm-none"><i class="mdi mdi-home-variant"></i></span>
+                    <span class="d-none d-sm-block">Contract</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Layer-b1" data-toggle="tab" aria-expanded="true" class="nav-link">
+                    <span class="d-block d-sm-none"><i class="mdi mdi-account"></i></span>
+                    <span class="d-none d-sm-block">Layer</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Other-b1" data-toggle="tab" aria-expanded="true" class="nav-link">
+                    <span class="d-block d-sm-none"><i class="mdi mdi-email-outline"></i></span>
+                    <span class="d-none d-sm-block">Other</span>
+                </a>
+            </li>
+
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane show active" id="home-b1">
+                <app-search-contract-tab></app-search-contract-tab>
+            </div>
+            <div class="tab-pane show" id="Layer-b1">
+                <app-search-contract-layer></app-search-contract-layer>
+            </div>
+            <div class="tab-pane show" id="Other-b1">
+                <app-search-contract-other></app-search-contract-other>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group row col mx-auto px-0 mt-3">
+        <div class="col-6 pl-0">
+            <button class="btn btn-orange waves-effect width-md btn-block" (click)="_baseService.currentActiveContent=''; _baseService.closeRightSideBar();"
+                type="button">Search
+            </button>
+        </div>
+        <div class="col-6 pr-0">
+            <button class="btn btn-secondary waves-effect width-md btn-block" type="button" data-dismiss="modal" aria-hidden="true">Reset</button>
+        </div>
+    </div>
+
+
+    <!-- Add Property Start -->
+</div>

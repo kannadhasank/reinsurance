@@ -1,0 +1,191 @@
+    <div class="modal-content mt-3">
+        <div class="modal-header">
+            <h4 class="modal-title text-center" id="myModalLabel">Participants</h4>
+            <h4 class="text-center"><button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#addParticipant">Add participant
+            </button></h4>
+        </div>
+        <div class="modal-body ">
+
+            <form class="form-horizontal" [formGroup]="createForm">
+
+                <div class="form-group row request-types">
+                    <div class="col-3 requestType">
+                        <label for="username">Layer: Cat Layer 1(CAT-01)</label>
+
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Limit: 11,000,000.00</label>
+
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Attachment: 10,000,000.00</label>
+
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Loss Cover: 100.000000</label>
+                    </div>
+                </div>
+
+                <div class="form-group row textarea-desc mb-0">
+                    <div class="col-3 form-group date-picker">
+                        <label for="emailaddress">Percent Placed: 10.000000%</label>
+
+
+                    </div>
+                    <div class="col-3 requestType">
+                        <label for="emailaddress">Retention: 0.000000%</label>
+
+                    </div>
+                    <div class="col-3 form-group date-picker">
+                        <label for="emailaddress">Warranty: </label>
+
+                    </div>
+
+                    <div class="col-3">
+                        <label for="emailaddress">Share Type: Percent</label>
+                    </div>
+                </div>
+
+
+                <div class="form-group row mb-0">
+
+                    <div class="col-3 form-group date-picker">
+                        <label for="emailaddress">Unit Value:  </label>
+
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Total Available:  </label>
+                    </div>
+
+
+                </div>
+
+
+                <div class="">
+
+
+
+
+                    <!-- Add Property Start -->
+
+
+
+                    <!-- Add Property Start -->
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="table-responsive">
+
+                            <table class="table table-hover mb-5">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="width_14">Organization</th>
+                                        <th class="width_14">Code</th>
+                                        <th class="width_14">Lead Reins</th>
+                                        <th class="">Share %</th>
+                                        <th class="width_14">Replacement Share</th>
+                                        <th class="width_14">Pepl. Processing Status</th>
+                                        <th class="width_14">Share Unit</th>
+
+                                        <th class="width_14">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-weight-500">American Agricultural</td>
+                                        <td> <span class="badge badge-dark p-1">8</span></td>
+
+                                        <td class="font-weight-500">100.000000</td>
+                                        <td>
+                                            
+                                        </td>0.000000<td>
+                                            
+                                        </td><td>
+                                            
+                                        </td>
+
+                                        <!-- <td class="text-center width_14">
+                          <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary mr-2"> View Contract
+                          </a>
+                          <button type="button" class="btn btn-sm btn-outline-primary mr-2" (click)="delete(i)"
+                           >
+                            Delete </button>
+                        </td> -->
+                                        <td>
+                                            <!-- <div>
+                          <popover-content #myPopover class="justify-content-center">
+                            <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary m-1"> View Contract
+                            </a>
+                            <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary m-1"> Edit Contract
+                            </a>
+                            <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary m-1"> Print Contract
+                            </a>
+                            <button type="button" class="btn btn-sm btn-outline-primary m-1">
+                                Delete </button>
+                            <a routerLink="/vendor-profile" class="btn btn-sm btn-outline-primary m-1"> Cancel Contract
+                            </a>
+                            
+                          </popover-content>
+                          <i class="fa fa-ellipsis-h" [popover]="myPopover" [popoverOnHover]="false" aria-hidden="true"></i>
+                        </div> -->
+                        <div class="btn-group dropdown">
+                            <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
+                                class="mdi mdi-dots-horizontal"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Delete</a>
+                              <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>Replace</a>
+                            </div>
+                          </div>
+                                        </td>
+
+                                    </tr>
+                                    <!-- ------------------------------- -->
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+
+    <ng-container>
+        <div id="addParticipant" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Add participant</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="field-3" class="control-label">Participant Name</label>
+                                    <select class="form-control" placeholder="Contract Name">
+                                        <option> Select Participant Name</option>
+                                        <option> Option 1</option>
+                                        <option> Option 2</option>
+                                        <option> Option 3</option>
+                                    </select> </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info waves-effect waves-light">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </ng-container>
