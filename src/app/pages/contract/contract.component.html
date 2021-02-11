@@ -11,11 +11,11 @@
             <h4 class="header-title pt-1">Contract</h4>
           </div>
           <div class="col-md-8 text-right">
-            <button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#newContrctPop">Create New Contract
+            <button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#newContrctPop">Create Contract
             </button>
-            <button type="button" class="btn btn-purple mr-2" data-toggle="modal" data-target="#copy-contract-modal">Copy
+            <!-- <button type="button" class="btn btn-purple mr-2" data-toggle="modal" data-target="#copy-renew-modal">Renew
               Contract
-            </button>
+            </button> -->
             
             <button type="button" class="btn btn-primary " (click)="_baseService.currentActiveContent='new_contract'; _baseService.showRightSideBar()">Search
               Contract
@@ -32,8 +32,8 @@
                 <thead class="bg-light">
                   <tr>
                     <th class="width_14">Contract Code</th>
-                    <th class="width_14">U/W Year</th>
-                    <th class="width_14">Former Code</th>
+                    <!-- <th class="width_14">U/W Year</th>
+                    <th class="width_14">Former Code</th> -->
                     <th class="">Contract Name</th>
                     <th class="width_14">Effective Date</th>
                     <th class="width_14">Expiration Date</th>
@@ -45,14 +45,12 @@
                 <tbody>
                   <tr>
                     <td class="font-weight-500">CPP-CT-</td>
-                    <td> <span class="badge badge-dark p-1">2020</span></td>
-                    <td>FORM-001</td>
-
+                    <!-- <td> <span class="badge badge-dark p-1">2020</span></td>
+                    <td>FORM-001</td> -->
                     <td class="font-weight-500">Equiipment Breakdown - CPP</td>
                     <td>
                       <span class="badge badge-warning p-1">12-12-2020</span>
                     </td>
-
                     <td>
                       <span class="badge badge-primary p-1">12-12-2021</span>
                     </td>
@@ -89,12 +87,12 @@
                         <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
                             class="mdi mdi-dots-horizontal"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
+                          <a data-toggle="modal" data-target="#update-contract-modal"class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
+                          <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a>
-                          <a data-toggle="modal" data-target="#copy-renew-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-refresh mr-2 font-18 text-muted vertical-middle"></i>Renew Contract</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a> -->
+                          <a data-toggle="modal" data-target="#copy-contract-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-content-copy mr-2 font-18 text-muted vertical-middle"></i>Copy Contract</a>
                         </div>
                       </div>
 
@@ -149,12 +147,12 @@
                         <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
                             class="mdi mdi-dots-horizontal"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
+                          <a data-toggle="modal" data-target="#update-contract-modal"class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
+                          <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
-                          <a (click)="delete(i)" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a>
-                          <a data-toggle="modal" data-target="#copy-renew-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Renew Contract</a>
+                          <a (click)="delete(i)" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a> -->
+                          <a data-toggle="modal" data-target="#copy-contract-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-content-copy mr-2 font-18 text-muted vertical-middle"></i>Copy Contract</a>
                         </div>
                       </div>
 
@@ -226,6 +224,12 @@
 <ng-container>
     <div id="copy-renew-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
      <app-renew-contract></app-renew-contract>
+    </div>
+  </ng-container>
+  
+  <ng-container>
+    <div id="update-contract-modal" class="modal fade ticket-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+     <app-update-contract></app-update-contract>
     </div>
   </ng-container>
 

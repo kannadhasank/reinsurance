@@ -17,7 +17,7 @@ public createForm: FormGroup;
   constructor(public Fb: FormBuilder,public _baseService: BaseService, public http:HttpClient) { }
 
   ngOnInit(): void {
-  this.createFormMethod()
+  this.createFormMethod();
   }
 
 
