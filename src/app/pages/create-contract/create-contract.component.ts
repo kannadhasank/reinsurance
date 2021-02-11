@@ -31,16 +31,15 @@ createFormMethod(){
   ibnrExclusionFlag : new FormControl(''),
   effectiveDate : new FormControl(''),
   expirationDate : new FormControl(''),
-    Aggregated : new FormControl(''),
+  Aggregated : new FormControl(''),
     
   })
 }
 add(){
-  
   Swal.fire('Success', 'Contract Created!', 'success')
   this._baseService.tableArray.push(this.createForm.value)
   this.http.post('10.1.73.171:8080/contract/createContract',this.createForm.value).subscribe(x=>{
-    
   })
 }
+
 }
