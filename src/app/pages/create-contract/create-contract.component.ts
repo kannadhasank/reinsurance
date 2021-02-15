@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { BaseService } from '../../shared/base.service';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -36,7 +36,7 @@ createFormMethod(){
   })
 }
 add(){
-  Swal.fire('Success', 'Contract Created!', 'success')
+  Swal.fire('Success', 'Contract Created!', 'success');
   this._baseService.tableArray.push(this.createForm.value)
   this.http.post('10.1.73.171:8080/contract/createContract',this.createForm.value).subscribe(x=>{
   })

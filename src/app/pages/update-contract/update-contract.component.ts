@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import Swal from 'sweetalert2';
+
+declare var $: any;
 
 @Component({
   selector: 'app-update-contract',
@@ -9,32 +13,40 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class UpdateContractComponent implements OnInit {
 
   updateContractForm: FormGroup;
+  submitted: boolean;
+  reasonForUpdate;
 
   constructor(
     public fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.submitted = true;
     this.formMethod();
   }
 
   formMethod() {
     return this.updateContractForm = this.fb.group({
-      affiliateID: [''],
-      contractTypeID: [''],
-      contractCode: [''],
-      contractName: [''],
-      renewalTypeCode: [''],
+      affiliateID: ['', [Validators.required]],
+      contractTypeID: ['', [Validators.required]],
+      contractCode: ['', [Validators.required]],
+      contractName: ['', [Validators.required]],
+      renewalTypeCode: ['', [Validators.required]],
       ibnrExclusionFlag: [''],
-      effectiveDate: [''],
-      expirationDate: [''],
+      effectiveDate: ['', [Validators.required]],
+      expirationDate: ['', [Validators.required]],
       aggregatedClaimMethod: [''],
-      reason: ['']
+      reasonForUpdate: ['', [Validators.required]]
     });
   }
 
-  updateContract(){
-    
+  updateContract() {
+    console.log(this.updateContractForm.valid)
+    if (this.updateContractForm.valid) {
+      this.submitted = false;
+      // $("#editContractModal").modal("hide");
+      Swal.fire('Success', 'Contract Updated!', 'success');
+    }
   }
 
 }
