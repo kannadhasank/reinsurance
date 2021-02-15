@@ -1,8 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { AccordionModule } from 'primeng/accordion';
+import { PopoverModule } from "ngx-smart-popover";
+import { DataTablesModule } from 'angular-datatables';
+
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { LeftSidebarComponent } from './common/left-sidebar/left-sidebar.component';
@@ -17,14 +24,10 @@ import { SearchContractTabComponent } from './pages/search-contract-tab/search-c
 import { SearchContractLayerComponent } from './pages/search-contract-layer/search-contract-layer.component';
 import { SearchContractOtherComponent } from './pages/search-contract-other/search-contract-other.component';
 import { CreateContractComponent } from './pages/create-contract/create-contract.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.component';
 import { CreateLayerComponent } from './pages/create-layer/create-layer.component';
 import { DatatableComponent } from './pages/datatable/datatable.component';
-
 import { BasicTableComponent } from './pages/basic-table/basic-table.component';
-import {PopoverModule} from "ngx-smart-popover";
-import { DataTablesModule } from 'angular-datatables';
 import { Contrac2Component } from './contrac2/contrac2.component';
 import { CreateContract2Component } from './create-contract2/create-contract2.component';
 import { DetailsComponent } from './details/details.component';
@@ -50,7 +53,8 @@ import { CliamCreateComponent } from './claim/cliam-create/cliam-create.componen
 import { CopyContractComponent } from './pages/copy-contract/copy-contract.component';
 import { RenewContractComponent } from './pages/renew-contract/renew-contract.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UpdateContractComponent } from './pages/update-contract/update-contract.component'
+import { UpdateContractComponent } from './pages/update-contract/update-contract.component';
+import { LayerComponent } from './pages/layers/layer/layer.component'
 
 
 @NgModule({
@@ -98,17 +102,20 @@ import { UpdateContractComponent } from './pages/update-contract/update-contract
     CliamCreateComponent,
     CopyContractComponent,
     RenewContractComponent,
-    UpdateContractComponent
+    UpdateContractComponent,
+    LayerComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    DataTablesModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     PopoverModule,
-    DataTablesModule,
-    HttpClientModule
-    
+    AccordionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

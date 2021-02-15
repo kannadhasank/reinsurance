@@ -13,22 +13,26 @@ import { ParticipantSummaryComponent } from './layers/participant-summary/partic
 import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-guide.component';
 import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
 import { TermsComponent } from './layers/terms/terms.component';
+import { LayerComponent } from './pages/layers/layer/layer.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full'  },
-  { path: 'dashboard', component: DashboardComponent, children: [
-    { path: '', component: UserSetupComponent },
-    { path: 'contract', component: ContractComponent },
-    { path: 'Layer', component: LayerSummaryComponent },
-    { path: 'contract2', component: Contrac2Component },
-    { path: 'participants', component: ParticipantsMasterComponent },
-    { path: 'claim-summary', component: CliamSummaryComponent },
-    { path: 'participant', component: ParticipantSummaryComponent },
-    {path: 'attachment', component: AttachmentGuideComponent},
-    {path: 'namedInsured', component: NamedInsuredComponent},
-    {path: 'terms',component: TermsComponent}
-  ] },
- 
+  { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full' },
+  {
+    path: 'dashboard', component: DashboardComponent, children: [
+      { path: '', component: UserSetupComponent },
+      { path: 'contract', component: ContractComponent },
+      { path: 'Layer', component: LayerSummaryComponent },
+      { path: 'contract2', component: Contrac2Component },
+      { path: 'participants', component: ParticipantsMasterComponent },
+      { path: 'claim-summary', component: CliamSummaryComponent },
+      { path: 'participant', component: ParticipantSummaryComponent },
+      { path: 'attachment', component: AttachmentGuideComponent },
+      { path: 'namedInsured', component: NamedInsuredComponent },
+      { path: 'terms', component: TermsComponent },
+      { path: 'layer-new', component: LayerComponent }
+    ]
+  },
+
 ];
 
 @NgModule({
