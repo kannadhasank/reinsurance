@@ -109,9 +109,9 @@ import { LayerComponent } from './pages/layers/layer/layer.component'
     LayerComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     DataTablesModule,
     HttpClientModule,
     FormsModule,
