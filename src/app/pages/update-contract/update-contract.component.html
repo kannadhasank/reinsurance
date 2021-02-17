@@ -2,93 +2,93 @@
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <!-- <div class="row"> -->
             <h4 class="modal-title text-center" id="myModalLabel">Edit Contract</h4>
             <label for="">Last Modified: <span>Test 02/11/2021 02:50:10</span></label>
-            <!-- /</div> -->
         </div>
-        <div class="modal-body ">
+        <div class="modal-body">
             <form class="form-horizontal" [formGroup]="updateContractForm">
-                <div class="form-group row request-types">
-                    <div class="col-md-6 requestType">
-                        <label for="affiliateID">Contract Affiliate <span class="text-danger">*</span></label>
-                        <select class="form-control" formControlName="affiliateID" placeholder="Common area maintenance"
-                            id="affiliateID"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.affiliateID.invalid }">
-                            <option> Contract Affiliate</option>
-                            <option> Option 1</option>
-                            <option> Option 2</option>
-                            <option> Option 3</option>
-                        </select>
+                <div class="form-group row p-fluid p-grid mt-3">
+                    <div class="col-md-6">
+                        <span class="p-float-label">
+                            <p-dropdown inputId="affiliateID" [autoDisplayFirst]="false" [options]="contractCodes"
+                                 optionLabel="name" formControlName="affiliateID"
+                            ></p-dropdown>
+                            <label for="affiliateID">Contract Affiliate</label>
+                        </span>
                         <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.affiliateID.invalid">Please select Contract
                             Affiliate</span>
                     </div>
-                    <div class="col-md-3">
-                        <label for="contractTypeID">Contract Type <span class="text-danger">*</span></label>
-                        <select class="form-control" formControlName="contractTypeID" id="contractTypeID"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.contractTypeID.invalid }">
-                            <option> Select Contract Type</option>
-                            <option> Option 1</option>
-                            <option> Option 2</option>
-                            <option> Option 3</option>
-                        </select>
+                    <div class="col-3">
+                        <span class="p-float-label">
+                            <p-dropdown inputId="contractType" [autoDisplayFirst]="false" id="contractType"
+                                [options]="contractCodes" formControlName="contractTypeID"
+                                optionLabel="name"
+                                ></p-dropdown>
+                            <label for="contractType">Contract Type</label>
+                        </span>
                         <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.contractTypeID.invalid">Please select
                             Contract Type</span>
                     </div>
                     <div class="col-3">
-                        <label for="contractCode">Contract Code <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" formControlName="contractCode" id="contractCode"
-                            value="CPP-CT" name="date-ticket"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.contractCode.invalid }">
+                        <span class="p-float-label">
+                            <input type="text" pInputText id="contractCode" formControlName="contractCode"
+                                class="form-control p-inputText"
+                                [ngClass]="{ 'input-error': submitted && updateContractForm.controls.contractCode.invalid }">
+                            <label for="contractCode">Contract Code</label>
+                        </span>
                         <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.contractCode.invalid">Contract Code cannot
                             be blank</span>
                     </div>
                 </div>
 
-                <div class="form-group row mb-0">
-                    <div class="col-3 form-group date-picker">
-                        <label for="contractName">Contract Name <span class="text-danger">*</span></label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="contractName" formControlName="contractName"
-                                value="Equiipment Breakdown - CPP" name="contractName"
+                <div class="form-group row p-fluid p-grid mt-4">
+                    <div class="col-3">
+                        <span class="p-float-label">
+                            <input type="text" pInputText id="contractName" formControlName="contractName"
+                                class="form-control p-inputText"
                                 [ngClass]="{ 'input-error': submitted && updateContractForm.controls.contractName.invalid }">
-                            <span class="error-msg"
-                                *ngIf="submitted && updateContractForm.controls.contractName.invalid">Contract Name
-                                cannot
-                                be blank</span>
-                        </div>
+                            <label for="contractName">Contract Name</label>
+                        </span>
+                        <span class="error-msg"
+                            *ngIf="submitted && updateContractForm.controls.contractName.invalid">Contract Name
+                            cannot
+                            be blank</span>
                     </div>
-                    <div class="col-3 requestType">
-                        <label for="renewalTypeCode">Renewal Type <span class="text-danger">*</span></label>
-                        <select class="form-control" id="renewalTypeCode" formControlName="renewalTypeCode"
-                            placeholder="Renewal Type"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.renewalTypeCode.invalid }">
-                            <option> Select Business Group</option>
-                            <option> Option 1</option>
-                            <option> Option 2</option>
-                            <option> Option 3</option>
-                        </select>
+                    <div class="col-3">
+                        <span class="p-float-label">
+                            <p-dropdown inputId="renewalTypeCode" [autoDisplayFirst]="false" [options]="contractCodes"
+                                [(ngModel)]="renewalTypeCode" optionLabel="name" formControlName="renewalTypeCode"
+                                >
+                            </p-dropdown>
+                            <label for="renewalTypeCode">Renewal Type</label>
+                        </span>
                         <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.renewalTypeCode.invalid">Please select
                             Renewal Type</span>
                     </div>
                     <div class="col-3">
-                        <label for="effectiveDate">Effective Date <span class="text-danger">*</span></label>
-                        <input type="date" class="form-control" id="effectiveDate" name="effectiveDate"
-                            formControlName="effectiveDate"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.effectiveDate.invalid }">
+                        <span class="p-float-label">
+                            <p-calendar formControlName="effectiveDate" id="effectiveDate" [(ngModel)]="effectiveDate"
+                                [showIcon]="true" dateFormat="mm/dd/yy" dataType="string"
+                                >
+                            </p-calendar>
+                            <label for="effectiveDate">Effective Date</label>
+                        </span>
                         <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.effectiveDate.invalid">Effective Date cannot
                             be blank</span>
                     </div>
                     <div class="col-3">
-                        <label for="expirationDate">Expiration Date <span class="text-danger">*</span></label>
-                        <input type="date" class="form-control" formControlName="expirationDate" id="expirationDate"
-                            name="expirationDate"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.expirationDate.invalid }">
+                        <span class="p-float-label">
+                            <p-calendar formControlName="expirationDate" id="expirationDate"
+                                [(ngModel)]="expirationDate" [showIcon]="true" dateFormat="mm/dd/yy" dataType="string"
+                                >
+                            </p-calendar>
+                            <label for="expirationDate">Expiration Date</label>
+                        </span>
                         <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.expirationDate.invalid">Expiration Date
                             cannot
@@ -96,19 +96,17 @@
                     </div>
                 </div>
 
-                <div class="form-group row mb-0">
-                    <div class="col-3 requestType">
-                        <label for="aggregatedClaimMethod">Aggregated Claim Method</label>
-                        <select class="form-control" id="aggregatedClaimMethod" placeholder="Aggregated Claim Method"
-                            formControlName="aggregatedClaimMethod"
-                            [ngClass]="{ 'input-error': submitted && updateContractForm.controls.aggregatedClaimMethod.invalid }">
-                            <option>Select Aggregated Claim Method</option>
-                            <option> Option 1</option>
-                            <option> Option 2</option>
-                            <option> Option 3</option>
-                        </select>
+                <div class="form-group row p-fluid p-grid mt-4">
+                    <div class="col-3">
+                        <span class="p-float-label">
+                            <p-dropdown inputId="aggregatedClaimMethod" [autoDisplayFirst]="false"
+                                [options]="contractCodes" [(ngModel)]="aggregatedClaimMethod" optionLabel="name"
+                                formControlName="aggregatedClaimMethod">
+                            </p-dropdown>
+                            <label for="aggregatedClaimMethod">Aggregated Claim Method</label>
+                        </span>
                     </div>
-                    <div class="col-3 requestType mt-4">
+                    <div class="col-3 requestType mt-2">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" formControlName="ibnrExclusionFlag" class="custom-control-input"
                                 id="customCheck1">
@@ -116,29 +114,21 @@
                         </div>
                     </div>
 
-                    <div class="col-3 requestType">
+                    <div class="col-3 mt-n2">
                         <label for="Layer-12">Reason for update<span class="text-danger">*</span></label>
-                        <div class="form-group row mt-1">
-                            <div class="form-radio-buttons">
-                                <div class="mt-3">
-                                    <div class="row">
-                                        <div class="custom-control custom-radio">
-                                            <input id="correction" type="radio"
-                                                class="custom-control-input form-control"
-                                                formControlName="reasonForUpdate" value="correction">
-                                            <label class="custom-control-label" for="correction">Correction</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="endorsement" type="radio"
-                                                class="custom-control-input form-control"
-                                                formControlName="reasonForUpdate" value="endorsement">
-                                            <label class="custom-control-label" for="endorsement">Endorsement</label>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="form-radio-buttons row">
+                            <div class="custom-control custom-radio">
+                                <input id="correction" type="radio" class="custom-control-input form-control"
+                                    formControlName="reasonForUpdate" value="correction">
+                                <label class="custom-control-label" for="correction">Correction</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="endorsement" type="radio" class="custom-control-input form-control"
+                                    formControlName="reasonForUpdate" value="endorsement">
+                                <label class="custom-control-label" for="endorsement">Endorsement</label>
                             </div>
                         </div>
-                        <span class="error-msg"
+                        <span class="error-msg mt-1"
                             *ngIf="submitted && updateContractForm.controls.reasonForUpdate.invalid">Please select
                             Reason for update</span>
                     </div>

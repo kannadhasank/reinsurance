@@ -15,6 +15,13 @@ export class UpdateContractComponent implements OnInit {
   updateContractForm: FormGroup;
   submitted: boolean = false;
   reasonForUpdate;
+  expirationDate;
+  effectiveDate;
+  affiliateID;
+  contractTypeID;
+  renewalTypeCode;
+  aggregatedClaimMethod;
+  contractCodes: { name: string; code: string; }[];
 
   constructor(
     public fb: FormBuilder
@@ -23,6 +30,11 @@ export class UpdateContractComponent implements OnInit {
   ngOnInit(): void {
     this.submitted = true;
     this.formMethod();
+    this.contractCodes = [
+      {name: 'Option 1', code: '1'},
+      {name: 'Option 2', code: '2'},
+      {name: 'Option 3', code: '3'},
+  ];
   }
 
   formMethod() {
@@ -46,6 +58,7 @@ export class UpdateContractComponent implements OnInit {
       this.submitted = false;
       // $("#editContractModal").modal("hide");
       Swal.fire('Success', 'Contract Updated!', 'success');
+      //this.updateContractForm.reset();
     }
   }
 

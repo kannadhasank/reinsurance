@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { AccordionModule } from 'primeng/accordion';
 import { PopoverModule } from "ngx-smart-popover";
 import { DataTablesModule } from 'angular-datatables';
+import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -106,16 +109,18 @@ import { LayerComponent } from './pages/layers/layer/layer.component'
     LayerComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     DataTablesModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     PopoverModule,
-    AccordionModule
-
+    AccordionModule,
+    CalendarModule,
+    DropdownModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

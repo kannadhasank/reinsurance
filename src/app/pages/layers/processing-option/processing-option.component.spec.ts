@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ProcessingOptionComponent } from './processing-option.component';
 
@@ -6,7 +6,7 @@ describe('ProcessingOptionComponent', () => {
   let component: ProcessingOptionComponent;
   let fixture: ComponentFixture<ProcessingOptionComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ProcessingOptionComponent ]
     })

@@ -1,80 +1,110 @@
-<div class="modal-dialog">
+<div class="modal-dialog modal-xl">
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Copy Contract</h4>
+            <h4 class="modal-title text-center" id="myModalLabel">Copy Contract</h4>
         </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="field-3" class="control-label">Contract Name</label>
-                        <input type="text" class="form-control" id="field-3" readonly placeholder="Contract Name">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="field-1" class="control-label">Contract Code</label>
-                        <input type="text" class="form-control" id="field-1" placeholder="Contract Code">
-                    </div>
-                </div>
-                <!-- <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="field-2" class="control-label">Template</label>
-                        <input type="text" class="form-control" id="field-2" placeholder="Template">
-                    </div>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="field-1" class="control-label">Effective Date</label>
-                        <input type="date" class="form-control" id="field-4" placeholder="John">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="field-2" class="control-label">Expiration Date</label>
-                        <input type="date" class="form-control" id="field-5" placeholder="Doe">
-                    </div>
-                </div>
-            </div>
+        <div class="modal-body ">
 
+            <form class="form-horizontal">
 
-            <!-- <div class="row mb-3">
-                <div class="col-md-12">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" name="layerInclude" id="layerInclude">
-                        <label class="custom-control-label" (click)="IsCopyLayer = !IsCopyLayer" for="layerInclude">Include&nbsp;Layer</label>
+                <div class="form-group row request-types">
+                    <div class="col-md-6 requestType">
+                        <label for="emailaddress">Contract Name <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" id="date-ticket" name="Contract-Name"
+                                class="form-control">
+                        </div>
+                        <!-- <p-dropdown [options]="contractNames" formControlName="contractName" optionLabel="name" 
+                        [(ngModel)]="contractName" [filter]="true" filterBy="name"
+                            [showClear]="true" placeholder="Select a Contract Name">
+                            <ng-template pTemplate="selectedItem">
+                                <div class="country-item country-item-value">
+                                    <div>{{contractName.name}}</div>
+                                </div>
+                            </ng-template>
+                            <ng-template let-country pTemplate="item">
+                                <div class="country-item">
+                                    <div>{{country.name}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown> -->
+                    </div>
+                    <div class="col-md-3">
+                        <label for="emailaddress">Contract Type <span class="text-danger">*</span></label>
+                        <select class="form-control" disabled>
+                            <option> Select Contract Type</option>
+                            <option> Option 1</option>
+                            <option> Option 2</option>
+                            <option> Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Contract Code <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="date-ticket" name="date-ticket" readonly>
                     </div>
                 </div>
-                
-            </div>
-            <div class="row" *ngIf="IsCopyLayer">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="layer1" id="layer1">
-                                        <label class="custom-control-label" for="layer1"> Layer&nbsp;1</label>
-                                    </div>
+                <div class="form-group row mb-0">
+                    <div class="col-3 form-group date-picker">
+
+                        <label for="username">Contract Affiliate <span class="text-danger">*</span></label>
+                        <select class="form-control" placeholder="Common area maintenance" disabled>
+                            <option> Contract Affiliate</option>
+                            <option> Option 1</option>
+                            <option> Option 2</option>
+                            <option> Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col-3 requestType">
+                        <label for="emailaddress">Renewal Type <span class="text-danger">*</span></label>
+                        <select class="form-control" formControlName="RenewalType" disabled>
+                            <option> Select Business Group</option>
+                            <option> Option 1</option>
+                            <option> Option 2</option>
+                            <option> Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Effective Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="date-ticket" name="date-ticket" readonly>
+                    </div>
+                    <div class="col-3">
+                        <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="date-ticket" name="date-ticket" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-0">
+                    <div class="col-3 requestType">
+                        <label for="Layer-12">Aggregated Claim Method</label>
+                        <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method" disabled>
+                            <option>Select Aggregated Claim Method</option>
+                            <option> Option 1</option>
+                            <option> Option 2</option>
+                            <option> Option 3</option>
+                        </select>
+                    </div>
+                    <div class="col-4 requestType mt-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="layer2" id="layer2">
-                                        <label class="custom-control-label" for="layer2"> Layer&nbsp;2</label>
-                                    </div>
-                        </div>
-                    </div>
-                </div> -->
+                </div>
 
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-info waves-effect waves-light">Copy Contract</button>
+                <div class="form-group row mb-0">
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <h4 class="header-title pt-1"></h4>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal">Copy Contract</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
