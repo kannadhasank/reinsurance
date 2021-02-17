@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CreateLayerComponent } from './create-layer.component';
 
@@ -6,7 +6,7 @@ describe('CreateLayerComponent', () => {
   let component: CreateLayerComponent;
   let fixture: ComponentFixture<CreateLayerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CreateLayerComponent ]
     })

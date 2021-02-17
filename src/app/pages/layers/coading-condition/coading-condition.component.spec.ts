@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CoadingConditionComponent } from './coading-condition.component';
 
@@ -6,7 +6,7 @@ describe('CoadingConditionComponent', () => {
   let component: CoadingConditionComponent;
   let fixture: ComponentFixture<CoadingConditionComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CoadingConditionComponent ]
     })

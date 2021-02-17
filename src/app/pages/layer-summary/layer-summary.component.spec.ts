@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LayerSummaryComponent } from './layer-summary.component';
 
@@ -6,7 +6,7 @@ describe('LayerSummaryComponent', () => {
   let component: LayerSummaryComponent;
   let fixture: ComponentFixture<LayerSummaryComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LayerSummaryComponent ]
     })

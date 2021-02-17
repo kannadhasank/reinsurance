@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CliamCreateComponent } from './cliam-create.component';
 
@@ -6,7 +6,7 @@ describe('CliamCreateComponent', () => {
   let component: CliamCreateComponent;
   let fixture: ComponentFixture<CliamCreateComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CliamCreateComponent ]
     })
