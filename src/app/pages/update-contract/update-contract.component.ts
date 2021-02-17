@@ -13,7 +13,7 @@ declare var $: any;
 export class UpdateContractComponent implements OnInit {
 
   updateContractForm: FormGroup;
-  submitted: boolean;
+  submitted: boolean = false;
   reasonForUpdate;
 
   constructor(
