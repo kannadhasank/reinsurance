@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayerComponent implements OnInit {
 
+  panelOpenState = false;
+  step = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
   }
 
 }

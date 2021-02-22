@@ -2,16 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AccordionModule } from 'primeng/accordion';
 import { PopoverModule } from "ngx-smart-popover";
 import { DataTablesModule } from 'angular-datatables';
-import { CalendarModule } from 'primeng/calendar';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputTextModule } from 'primeng/inputtext';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTableModule } from '@angular/material/table';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -88,12 +97,14 @@ import { LayerComponent } from './pages/layers/layer/layer.component'
     UWdetailsComponent,
     LayersAliasComponent,
     SettlementDetailsComponent,
+    ContactComponent,
     ProcessingOptionComponent,
     CoadingConditionComponent,
     LayerDetailsComponent,
     PremiumSettlementDetailsComponent,
     ParticipantSummaryComponent,
     AttachmentGuideComponent,
+    SearchContractOtherComponent,
     TermsComponent,
     NamedInsuredComponent,
     ParticipantsMasterComponent,
@@ -117,10 +128,19 @@ import { LayerComponent } from './pages/layers/layer/layer.component'
     FormsModule,
     ReactiveFormsModule,
     PopoverModule,
-    AccordionModule,
-    CalendarModule,
-    DropdownModule,
-    InputTextModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatListModule,
+    MatNativeDateModule,
+    MatExpansionModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatAutocompleteModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

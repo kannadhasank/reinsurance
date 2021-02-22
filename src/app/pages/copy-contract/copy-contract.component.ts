@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-copy-contract',
@@ -7,33 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CopyContractComponent implements OnInit {
 
+  myControl = new FormControl();
   contractName;
   IsCopyLayer: boolean = false;
-  contractNames: { name: string;}[];
-  countries: { name: string; code: string; }[];
-  selectedCountry: string;
+  options: string[] = ['Equipment Breakdown', 'Test Contract', 'Test Contract 1'];
+  filteredOptions: Observable<string[]>;
 
   constructor() { }
 
   ngOnInit(): void {
-    
-    this.contractNames = [
-      {name: 'CAT'},
-      {name: 'CPP-CAT'},
-      {name: 'PPL'}
-  ];
-  this.countries = [
-    {name: 'Australia', code: 'AU'},
-    {name: 'Brazil', code: 'BR'},
-    {name: 'China', code: 'CN'},
-    {name: 'Egypt', code: 'EG'},
-    {name: 'France', code: 'FR'},
-    {name: 'Germany', code: 'DE'},
-    {name: 'India', code: 'IN'},
-    {name: 'Japan', code: 'JP'},
-    {name: 'Spain', code: 'ES'},
-    {name: 'United States', code: 'US'}
-];
+    this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
 }

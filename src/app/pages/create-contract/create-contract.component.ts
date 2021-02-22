@@ -4,6 +4,7 @@ import { BaseService } from '../../shared/base.service';
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 
+declare var $: any;
 
 @Component({
   selector: 'app-create-contract',
@@ -11,35 +12,45 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./create-contract.component.scss']
 })
 export class CreateContractComponent implements OnInit {
-  
-public createForm: FormGroup;
 
-  constructor(public Fb: FormBuilder,public _baseService: BaseService, public http:HttpClient) { }
+  public createForm: FormGroup;
+  showErrorValidationMsg: string;
+
+  constructor(public Fb: FormBuilder, public _baseService: BaseService, public http: HttpClient) { }
 
   ngOnInit(): void {
-  this.createFormMethod();
+    this.createFormMethod();
+    this.showErrorValidationMsg = '';
   }
 
 
-createFormMethod(){
- return this.createForm = this.Fb.group({
-  affiliateID : new FormControl(''),
-  contractTypeID : new FormControl(''),
-  contractCode : new FormControl(''),
-  contractName : new FormControl(''),
-  renewalTypeCode : new FormControl(''),
-  ibnrExclusionFlag : new FormControl(''),
-  effectiveDate : new FormControl(''),
-  expirationDate : new FormControl(''),
-  Aggregated : new FormControl(''),
-    
-  })
-}
-add(){
-  Swal.fire('Success', 'Contract Created!', 'success');
-  this._baseService.tableArray.push(this.createForm.value)
-  this.http.post('10.1.73.171:8080/contract/createContract',this.createForm.value).subscribe(x=>{
-  })
-}
+  createFormMethod() {
+    return this.createForm = this.Fb.group({
+      affiliateID: ['', [Validators.required]],
+      contractTypeID: ['', [Validators.required]],
+      contractCode: ['', [Validators.required]],
+      contractName: ['', [Validators.required]],
+      renewalTypeCode: ['', [Validators.required]],
+      ibnrExclusionFlag: [''],
+      effectiveDate: ['', [Validators.required]],
+      expirationDate: ['', [Validators.required]],
+      aggregatedClaimMethod: ['']
+
+    })
+  }
+
+  createContract() {
+    console.log("valid/not = "+this.createForm.valid)
+    if (this.createForm.invalid) {
+      this.showErrorValidationMsg = "Please enter all mandatory fields";
+    } else {
+      this.showErrorValidationMsg = '';
+      $("createContract").modal('hide');
+      Swal.fire('Success', 'Contract Created Successfully', 'success');
+      this._baseService.tableArray.push(this.createForm.value);
+      this.http.post('10.1.73.171:8080/contract/createContract', this.createForm.value).subscribe(x => {
+      });
+    }
+  }
 
 }

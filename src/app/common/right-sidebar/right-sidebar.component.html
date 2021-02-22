@@ -1,35 +1,19 @@
 <!-- Right Sidebar -->
 <div class="right-bar">
-
-    <div class="slimscroll-menu">
-  
-      <div class="p-3">
-  
-  
-        <ng-container [ngSwitch]="_baseService.currentActiveContent">
-  
-          <ng-container *ngSwitchCase="'new_contract'">
-            <app-search-contract></app-search-contract>
-          </ng-container>
-  
-         
-          <ng-container *ngSwitchDefault>
-  
-           
-          </ng-container>
-  
+  <div class="slimscroll-menu">
+    <div class="p-3">
+      <ng-container [ngSwitch]="_baseService.currentActiveContent">
+        <ng-container *ngSwitchCase="'new_contract'">
+          <app-search-contract></app-search-contract>
         </ng-container>
-  
-  
-  
-  
-      </div>
-  
-  
-    </div> <!-- end slimscroll-menu-->
-  </div>
-  <!-- /Right-bar -->
-  
-  <!-- Right bar overlay-->
-  <div class="rightbar-overlay" *ngIf="_baseService.currentActiveContent"></div>
-  
+
+        <ng-container *ngSwitchDefault>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+
+<!-- Right bar overlay-->
+<div class="rightbar-overlay" *ngIf="_baseService.currentActiveContent"></div>

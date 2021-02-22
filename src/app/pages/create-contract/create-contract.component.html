@@ -1,35 +1,56 @@
-<div class="modal-dialog modal-xl">
+<div class="modal-dialog modal-xl" id="createContract">
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
       <h4 class="modal-title text-center" id="myModalLabel">Contract Creation</h4>
     </div>
     <div class="modal-body ">
-
       <form class="form-horizontal" [formGroup]="createForm">
-
-        <div class="form-group row request-types">
-          <div class="col-md-6 requestType">
-            <label for="username">Contract Affiliate <span class="text-danger">*</span></label>
+        <span *ngIf="showErrorValidationMsg" class="error-msg mb-3">
+          {{showErrorValidationMsg}}
+        </span>
+        <div class="form-group row">
+          <div class="col-md-6">
+            <!-- <label for="username">Contract Affiliate <span class="text-danger">*</span></label>
             <select class="form-control" formControlName="affiliateID" placeholder="Common area maintenance">
               <option> Contract Affiliate</option>
               <option> Option 1</option>
               <option> Option 2</option>
               <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Contract Affiliate<span class="text-danger">*</span></mat-label>
+              <mat-select formControlName="affiliateID">
+                <mat-option value="option">Option 1</mat-option>
+                <mat-option value="option">Option 2</mat-option>
+                <mat-option value="option">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="col-md-3">
-            <label for="emailaddress">Contract Type <span class="text-danger">*</span></label>
+            <!-- <label for="emailaddress">Contract Type <span class="text-danger">*</span></label>
             <select class="form-control" formControlName="contractTypeID" placeholder="">
               <option> Select Contract Type</option>
               <option> Option 1</option>
               <option> Option 2</option>
               <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Contract Type<span class="text-danger">*</span></mat-label>
+              <mat-select formControlName="contractTypeID">
+                <mat-option value="option">Option 1</mat-option>
+                <mat-option value="option">Option 2</mat-option>
+                <mat-option value="option">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="col-3">
-            <label for="emailaddress">Contract Code <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" formControlName="contractCode" id="date-ticket" name="date-ticket">
+            <!-- <label for="emailaddress">Contract Code <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" formControlName="contractCode" id="date-ticket" name="date-ticket"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Contract Code<span class="text-danger">*</span></mat-label>
+              <input matInput placeholder="Contract Code" formControlName="contractCode">
+            </mat-form-field>
           </div>
           <!-- <div class="col-md-3">
               <label for="emailaddress" class="text-danger">Business Group</label>
@@ -60,37 +81,58 @@
             </div>
           </div> -->
 
-        <div class="form-group row mb-0">
-
-          <div class="col-3 form-group date-picker">
-            <label for="emailaddress">Contract Name <span class="text-danger">*</span></label>
-
+        <div class="form-group row">
+          <div class="col-3">
+            <!-- <label for="emailaddress">Contract Name <span class="text-danger">*</span></label>
             <div class="input-group">
               <input type="text" id="date-ticket" formControlName="contractName" name="Contract-Name">
-            </div>
+            </div> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Contract Name<span class="text-danger">*</span></mat-label>
+              <input matInput placeholder="Contract Name" formControlName="contractName">
+            </mat-form-field>
           </div>
           <div class="col-3 requestType">
-            <label for="emailaddress">Renewal Type <span class="text-danger">*</span></label>
+            <!-- <label for="emailaddress">Renewal Type <span class="text-danger">*</span></label>
             <select class="form-control" formControlName="RenewalType" placeholder="Renewal Type">
               <option> Select Business Group</option>
               <option> Option 1</option>
               <option> Option 2</option>
               <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Renewal Type<span class="text-danger">*</span></mat-label>
+              <mat-select formControlName="renewalTypeCode">
+                <mat-option value="option">Option 1</mat-option>
+                <mat-option value="option">Option 2</mat-option>
+                <mat-option value="option">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
           <div class="col-3">
-            <label for="emailaddress">Effective Date <span class="text-danger">*</span></label>
-            <input type="date" class="form-control" id="date-ticket" name="date-ticket" formControlName="effectiveDate">
+            <!-- <label for="emailaddress">Effective Date <span class="text-danger">*</span></label>
+            <input type="date" class="form-control" id="date-ticket" name="date-ticket" formControlName="effectiveDate"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Effective Date<span class="text-danger">*</span></mat-label>
+              <input matInput [matDatepicker]="picker1" (focus)="picker1.open()" formControlName="effectiveDate">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
           </div>
           <div class="col-3">
-            <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
+            <!-- <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
             <input type="date" class="form-control" formControlName="expirationDate" id="date-ticket"
-              name="date-ticket">
+              name="date-ticket"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Expiration Date<span class="text-danger">*</span></mat-label>
+              <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" formControlName="expirationDate">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
           </div>
         </div>
 
-        <div class="form-group row mb-0">
-
+        <div class="form-group row">
           <!-- <div class="col-3 form-group date-picker">
               <label for="emailaddress">Aniversary Date</label>
               <div class="input-group">
@@ -103,25 +145,31 @@
             </div> -->
 
           <div class="col-3 requestType">
-            <label for="Layer-12">Aggregated Claim Method</label>
-            <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method">
+            <!-- <label for="Layer-12">Aggregated Claim Method</label>
+             <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method">
               <option>Select Aggregated Claim Method</option>
               <option> Option 1</option>
               <option> Option 2</option>
               <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+              <mat-label>Aggregated Claim Method</mat-label>
+              <mat-select formControlName="aggregatedClaimMethod">
+                <mat-option value="option">Option 1</mat-option>
+                <mat-option value="option">Option 2</mat-option>
+                <mat-option value="option">Option 3</mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
-          <div class="col-3 requestType mt-4">
+          <div class="col-3 requestType mt-2">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" formControlName="ibnrExclusionFlag" class="custom-control-input" id="customCheck1">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" formControlName="ibnrExclusionFlag">
               <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
             </div>
           </div>
         </div>
 
         <div class="form-group row mb-0">
-
-
         </div>
 
         <!-- <div class="card-box">
@@ -165,19 +213,14 @@
 
 </div> -->
 
-
-
-
         <div class="row mb-2">
           <div class="col-md-6">
             <h4 class="header-title pt-1"></h4>
           </div>
           <div class="col-md-6 text-right">
             <!-- <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button> -->
-
-            <button type="button" class="btn btn-orange  mr-2" data-dismiss="modal" (click)="add()">Create
+            <button type="button" class="btn btn-orange mr-2" (click)="createContract()">Create
               Contract</button>
-
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           </div>
         </div>

@@ -7,104 +7,142 @@
         </div>
         <div class="modal-body">
             <form class="form-horizontal" [formGroup]="updateContractForm">
-                <div class="form-group row p-fluid p-grid mt-3">
+                <span *ngIf="showErrorValidationMsg" class="error-msg mb-3">
+                    {{showErrorValidationMsg}}
+                  </span>
+                <div class="form-group row">
                     <div class="col-md-6">
-                        <span class="p-float-label">
+                        <!-- <span class="p-float-label">
                             <p-dropdown inputId="affiliateID" [autoDisplayFirst]="false" [options]="contractCodes"
                                  optionLabel="name" formControlName="affiliateID"
                             ></p-dropdown>
                             <label for="affiliateID">Contract Affiliate</label>
-                        </span>
-                        <span class="error-msg"
+                        </span> -->
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Contract Affiliate<span class="text-danger">*</span></mat-label>
+                            <mat-select formControlName="affiliateID">
+                                <mat-option value="option">Option 1</mat-option>
+                                <mat-option value="option">Option 2</mat-option>
+                                <mat-option value="option">Option 3</mat-option>
+                            </mat-select>
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.affiliateID.invalid">
+                                Please Select
+                                Affiliate
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.affiliateID.invalid">Please select Contract
-                            Affiliate</span>
+                            Affiliate</span> -->
                     </div>
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <p-dropdown inputId="contractType" [autoDisplayFirst]="false" id="contractType"
-                                [options]="contractCodes" formControlName="contractTypeID"
-                                optionLabel="name"
-                                ></p-dropdown>
-                            <label for="contractType">Contract Type</label>
-                        </span>
-                        <span class="error-msg"
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Contract Type<span class="text-danger">*</span></mat-label>
+                            <mat-select formControlName="contractTypeID">
+                                <mat-option value="option">Option 1</mat-option>
+                                <mat-option value="option">Option 2</mat-option>
+                                <mat-option value="option">Option 3</mat-option>
+                            </mat-select>
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.contractTypeID.invalid">
+                                Please Select
+                                Contract Type
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.contractTypeID.invalid">Please select
-                            Contract Type</span>
+                            Contract Type</span> -->
                     </div>
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <input type="text" pInputText id="contractCode" formControlName="contractCode"
-                                class="form-control p-inputText"
-                                [ngClass]="{ 'input-error': submitted && updateContractForm.controls.contractCode.invalid }">
-                            <label for="contractCode">Contract Code</label>
-                        </span>
-                        <span class="error-msg"
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Contract Code<span class="text-danger">*</span></mat-label>
+                            <input matInput placeholder="Contract Code" formControlName="contractCode">
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.contractCode.invalid">
+                                Contract Code cannot be blank
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.contractCode.invalid">Contract Code cannot
-                            be blank</span>
+                            be blank</span> -->
                     </div>
                 </div>
 
-                <div class="form-group row p-fluid p-grid mt-4">
+                <div class="form-group row mt-3">
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <input type="text" pInputText id="contractName" formControlName="contractName"
-                                class="form-control p-inputText"
-                                [ngClass]="{ 'input-error': submitted && updateContractForm.controls.contractName.invalid }">
-                            <label for="contractName">Contract Name</label>
-                        </span>
-                        <span class="error-msg"
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Contract Name<span class="text-danger">*</span></mat-label>
+                            <input matInput placeholder="Contract Name" formControlName="contractName">
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.contractName.invalid">
+                                Contract Name
+                                cannot
+                                be blank
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.contractName.invalid">Contract Name
                             cannot
-                            be blank</span>
+                            be blank</span> -->
                     </div>
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <p-dropdown inputId="renewalTypeCode" [autoDisplayFirst]="false" [options]="contractCodes"
-                                [(ngModel)]="renewalTypeCode" optionLabel="name" formControlName="renewalTypeCode"
-                                >
-                            </p-dropdown>
-                            <label for="renewalTypeCode">Renewal Type</label>
-                        </span>
-                        <span class="error-msg"
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Renewal Type<span class="text-danger">*</span></mat-label>
+                            <mat-select formControlName="renewalTypeCode">
+                                <mat-option value="option">Option 1</mat-option>
+                                <mat-option value="option">Option 2</mat-option>
+                                <mat-option value="option">Option 3</mat-option>
+                            </mat-select>
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.renewalTypeCode.invalid">
+                                Please select
+                                Renewal Type
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.renewalTypeCode.invalid">Please select
-                            Renewal Type</span>
+                            Renewal Type</span> -->
                     </div>
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <p-calendar formControlName="effectiveDate" id="effectiveDate" [(ngModel)]="effectiveDate"
-                                [showIcon]="true" dateFormat="mm/dd/yy" dataType="string"
-                                >
-                            </p-calendar>
-                            <label for="effectiveDate">Effective Date</label>
-                        </span>
-                        <span class="error-msg"
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Effective Date<span class="text-danger">*</span></mat-label>
+                            <input matInput [matDatepicker]="picker1" (focus)="picker1.open()"
+                                formControlName="effectiveDate">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.effectiveDate.invalid">Effective
+                                Date cannot
+                                be blank
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.effectiveDate.invalid">Effective Date cannot
-                            be blank</span>
+                            be blank</span> -->
                     </div>
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <p-calendar formControlName="expirationDate" id="expirationDate"
-                                [(ngModel)]="expirationDate" [showIcon]="true" dateFormat="mm/dd/yy" dataType="string"
-                                >
-                            </p-calendar>
-                            <label for="expirationDate">Expiration Date</label>
-                        </span>
-                        <span class="error-msg"
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Expiration Date<span class="text-danger">*</span></mat-label>
+                            <input matInput [matDatepicker]="picker2" (focus)="picker2.open()"
+                                formControlName="expirationDate">
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.expirationDate.invalid">
+                                Expiration Date cannot
+                                be blank
+                            </mat-error> -->
+                        </mat-form-field>
+                        <!-- <span class="error-msg"
                             *ngIf="submitted && updateContractForm.controls.expirationDate.invalid">Expiration Date
                             cannot
-                            be blank</span>
+                            be blank</span> -->
                     </div>
                 </div>
 
-                <div class="form-group row p-fluid p-grid mt-4">
+                <div class="form-group row mt-3">
                     <div class="col-3">
-                        <span class="p-float-label">
-                            <p-dropdown inputId="aggregatedClaimMethod" [autoDisplayFirst]="false"
-                                [options]="contractCodes" [(ngModel)]="aggregatedClaimMethod" optionLabel="name"
-                                formControlName="aggregatedClaimMethod">
-                            </p-dropdown>
-                            <label for="aggregatedClaimMethod">Aggregated Claim Method</label>
-                        </span>
+                        <mat-form-field appearance="legacy" class="example-full-width">
+                            <mat-label>Aggregated Claim Method</mat-label>
+                            <mat-select formControlName="aggregatedClaimMethod">
+                                <mat-option value="option">Option 1</mat-option>
+                                <mat-option value="option">Option 2</mat-option>
+                                <mat-option value="option">Option 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
                     </div>
                     <div class="col-3 requestType mt-2">
                         <div class="custom-control custom-checkbox">
@@ -113,10 +151,9 @@
                             <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
                         </div>
                     </div>
-
                     <div class="col-3 mt-n2">
-                        <label for="Layer-12">Reason for update<span class="text-danger">*</span></label>
-                        <div class="form-radio-buttons row">
+                        <!-- <label for="Layer-12">Reason for update<span class="text-danger">*</span></label> -->
+                        <!-- <div class="form-radio-buttons row">
                             <div class="custom-control custom-radio">
                                 <input id="correction" type="radio" class="custom-control-input form-control"
                                     formControlName="reasonForUpdate" value="correction">
@@ -127,10 +164,30 @@
                                     formControlName="reasonForUpdate" value="endorsement">
                                 <label class="custom-control-label" for="endorsement">Endorsement</label>
                             </div>
-                        </div>
-                        <span class="error-msg mt-1"
+                        </div> -->
+                        <label id="example-radio-group-label">Reason for Update<span class="text-danger">*</span></label>
+                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                            [(ngModel)]="reasonForUpdate" formControlName="reasonForUpdate">
+                            <div class="row mt-n2">
+                                <mat-radio-button value="1" class="ml-2 mr-2">Correction</mat-radio-button>
+                                <mat-radio-button value="2">Endorsement</mat-radio-button>
+                            </div>
+                            <!-- <mat-error *ngIf="submitted && updateContractForm.controls.reasonForUpdate.invalid" class="error-msg">
+                                Please Select
+                                Reason for update
+                            </mat-error> -->
+                        </mat-radio-group>
+                        <!-- <span class="error-msg mt-1"
                             *ngIf="submitted && updateContractForm.controls.reasonForUpdate.invalid">Please select
-                            Reason for update</span>
+                            Reason for update</span> -->
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Notes(if any)</mat-label>
+                                <textarea matInput placeholder="Enter notes"></textarea>
+                              </mat-form-field>
                     </div>
                 </div>
 
@@ -142,8 +199,8 @@
                         <h4 class="header-title pt-1"></h4>
                     </div>
                     <div class="col-md-6 text-right">
-                        <button type="button" class="btn btn-orange mr-2" data-dismiss="modal"
-                            (click)="updateContract()" [disabled]="this.updateContractForm.invalid">Update
+                        <button type="button" class="btn btn-orange mr-2"
+                            (click)="updateContract()">Update
                             Contract</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>

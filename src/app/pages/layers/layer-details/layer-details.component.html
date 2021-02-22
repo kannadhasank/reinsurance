@@ -1,21 +1,37 @@
 <form class="form-horizontal">
     <div class="form-group row">
         <div class="col-6">
-            <label for="Layer-1">Layer Title <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" id="Layer-1" name="Layer-1">
+            <!-- <label for="Layer-1">Layer Title <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="Layer-1" name="Layer-1"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Layer Title</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
         </div>
         <div class="col-3">
-            <label for="Layer-2">Layer # </label>
-            <input type="text" readonly class="form-control" id="Layer-2" value="LAR0001" name="Layer-2">
+            <!-- <label for="Layer-2">Layer # </label>
+            <input type="text" readonly class="form-control" id="Layer-2" value="LAR0001" name="Layer-2"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Layer #</mat-label>
+                <input matInput placeholder="" value="LAR0001" readonly>
+            </mat-form-field>
         </div>
         <div class="col-3">
-            <label for="Layer-5">Layer Type <span class="text-danger">*</span></label>
+            <!-- <label for="Layer-5">Layer Type <span class="text-danger">*</span></label>
             <select class="form-control" id="Layer-5" placeholder="layer Type">
                 <option> Select Layer Type</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
                 <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Layer Type</mat-label>
+                <mat-select>
+                    <mat-option value="option">Option 1</mat-option>
+                    <mat-option value="option">Option 2</mat-option>
+                    <mat-option value="option">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
         <!-- <div class="col-3 form-group">
             <label for="Layer-3" class="text-danger">U/W Year</label>
@@ -36,50 +52,92 @@
     </div>
     <div class="form-group row">
         <div class="col-3">
-            <label for="Layer-7">Layer Subject Type <span class="text-danger">*</span></label>
+            <!-- <label for="Layer-7">Layer Subject Type <span class="text-danger">*</span></label>
             <select class="form-control" id="Layer-7" placeholder="Layer Subject Type">
                 <option> Select Layer Subject Type</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
                 <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Layer Subject Type</mat-label>
+                <mat-select>
+                    <mat-option value="option">Option 1</mat-option>
+                    <mat-option value="option">Option 2</mat-option>
+                    <mat-option value="option">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
         <div class="col-3">
-            <label for="Layer-6">U/W Status </label>
+            <!-- <label for="Layer-6">U/W Status </label>
             <select class="form-control" id="Layer-6" placeholder="U/W Status">
                 <option> Select U/W Status</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
                 <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>U/W Status</mat-label>
+                <mat-select>
+                    <mat-option value="option">Option 1</mat-option>
+                    <mat-option value="option">Option 2</mat-option>
+                    <mat-option value="option">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
         <div class="col-3">
-            <label for="Layer-10">Deposit Premium</label>
-            <input type="text" class="form-control" id="Layer-10" name="Layer-10">
+            <!-- <label for="Layer-10">Deposit Premium</label>
+            <input type="text" class="form-control" id="Layer-10" name="Layer-10"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Deposit Premium</mat-label>
+                <input matInput placeholder="">
+            </mat-form-field>
         </div>
         <div class="col-3">
-            <label for="Layer-8">Accounting Status <span class="text-danger">*</span></label>
+            <!-- <label for="Layer-8">Accounting Status <span class="text-danger">*</span></label>
             <select class="form-control" id="Layer-8" placeholder="Accounting Status">
                 <option> Select Accounting Status</option>
                 <option> Option 1</option>
                 <option> Option 2</option>
                 <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Accounting Status</mat-label>
+                <mat-select>
+                    <mat-option value="option">Option 1</mat-option>
+                    <mat-option value="option">Option 2</mat-option>
+                    <mat-option value="option">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     </div>
     <div class="form-group row">
         <div class="col-3">
-            <label for="Layer-9">Layer Base Currency</label>
+            <!-- <label for="Layer-9">Layer Base Currency</label>
             <select class="form-control" id="Layer-9" placeholder="Layer Base Currency">
                 <option> Select Layer Base Currency</option>
                 <option selected>USD</option>
                 <option> Option 2</option>
                 <option> Option 3</option>
-            </select>
+            </select> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Layer Base Currency</mat-label>
+                <mat-select>
+                    <mat-option value="option">Option 1</mat-option>
+                    <mat-option value="option">Option 2</mat-option>
+                    <mat-option value="option">Option 3</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
         <div class="col-3">
-            <label for="Layer-10">Contract Issue Date</label>
-            <input type="date" class="form-control" id="Layer-10" name="Layer-10">
+            <!-- <label for="Layer-10">Contract Issue Date</label>
+            <input type="date" class="form-control" id="Layer-10" name="Layer-10"> -->
+            <mat-form-field appearance="legacy" class="example-full-width">
+                <mat-label>Contract Issue Date</mat-label>
+                <input matInput [matDatepicker]="picker1" (focus)="picker1.open()">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
         </div>
         <!-- <div class="col-3 form-group">
             <label for="Layer-11" class="text-danger">Former Code</label>
@@ -121,22 +179,38 @@
         <h4 class="header-title mb-4">Allocation Method</h4>
         <div class="form-group row mb-0 mt-2">
             <div class="col-3">
-                <label for="Layer-16">Deductible <span class="text-danger">*</span></label>
+                <!-- <label for="Layer-16">Deductible <span class="text-danger">*</span></label>
                 <select class="form-control" id="Layer-16" placeholder="Ddeductible">
                     <option> Select Deductible</option>
                     <option> Option 1</option>
                     <option> Option 2</option>
                     <option> Option 3</option>
-                </select>
+                </select> -->
+                <mat-form-field appearance="legacy" class="example-full-width">
+                    <mat-label>Deductible</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Option 1</mat-option>
+                        <mat-option value="option">Option 2</mat-option>
+                        <mat-option value="option">Option 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
             <div class="col-3">
-                <label for="Layer-17">Reinstatement <span class="text-danger">*</span></label>
+                <!-- <label for="Layer-17">Reinstatement <span class="text-danger">*</span></label>
                 <select class="form-control" id="Layer-17" placeholder="Reinstatement">
                     <option> Select Reinstatement</option>
                     <option> Option 1</option>
                     <option> Option 2</option>
                     <option> Option 3</option>
-                </select>
+                </select> -->
+                <mat-form-field appearance="legacy" class="example-full-width">
+                    <mat-label>Reinstatement</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Option 1</mat-option>
+                        <mat-option value="option">Option 2</mat-option>
+                        <mat-option value="option">Option 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
         </div>
     </div>
@@ -149,13 +223,21 @@
     <div class="">
         <div class="form-group row mb-0 mt-2">
             <div class="col-3">
-                <label for="Layer-18">Transactions</label>
+                <!-- <label for="Layer-18">Transactions</label>
                 <select class="form-control" id="Layer-18" placeholder="Transactions">
                     <option> Select Transactions</option>
                     <option> Option 1</option>
                     <option> Option 2</option>
                     <option> Option 3</option>
-                </select>
+                </select> -->
+                <mat-form-field appearance="legacy" class="example-full-width">
+                    <mat-label>Transactions</mat-label>
+                    <mat-select>
+                        <mat-option value="option">Option 1</mat-option>
+                        <mat-option value="option">Option 2</mat-option>
+                        <mat-option value="option">Option 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>
         </div>
         <div class="row mb-2">
