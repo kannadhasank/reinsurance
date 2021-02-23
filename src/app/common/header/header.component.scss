@@ -1,0 +1,29 @@
+.notification-list{
+    list-style-type: none;
+}
+
+.navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+.bg-light{
+    background-color: #64c5b1!important;
+}
+
+.navbar-brand{
+    font-size: xx-large;
+}
+
+.vertical-line{
+    border-right: 1px solid #000;
+}
+
+.nav-link{
+    font-size: medium;
+}

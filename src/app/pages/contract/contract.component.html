@@ -8,20 +8,22 @@
 
         <div class="row mb-2">
           <div class="col-md-4">
-            <h4 class="header-title pt-1">Contract</h4>
+            <h4 class="header-title pt-1"><b>Dashboard</b></h4>
           </div>
-          <div class="col-md-8 text-right">
-            <button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#newContrctPop">Create Contract
-            </button>
-            <button type="button" class="btn btn-purple mr-2" data-toggle="modal" data-target="#copy-contract-modal">Copy
+          <!-- <div class="col-md-8 text-right">
+            <button type="button" class="btn btn-dark mr-2" data-toggle="modal" data-target="#newContrctPop">Create
               Contract
             </button>
-            
-            <button type="button" class="btn btn-primary " (click)="_baseService.currentActiveContent='new_contract'; _baseService.showRightSideBar()">Search
+            <button type="button" class="btn btn-purple mr-2" data-toggle="modal"
+              data-target="#copy-contract-modal">Copy
               Contract
             </button>
 
-          </div>
+            <button type="button" class="btn btn-primary "
+              (click)="_baseService.currentActiveContent='new_contract'; _baseService.showRightSideBar()">Search
+              Contract
+            </button>
+          </div> -->
         </div>
         <hr>
         <div class="row mt-2">
@@ -84,15 +86,20 @@
                             <i class="fa fa-ellipsis-h" [popover]="myPopover" [popoverOnHover]="false" aria-hidden="true"></i>
                           </div> -->
                       <div class="btn-group dropdown">
-                        <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                            class="mdi mdi-dots-horizontal"></i></a>
+                        <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown"
+                          aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a data-toggle="modal" data-target="#update-contract-modal"class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
+                          <a data-toggle="modal" data-target="#update-contract-modal" class="dropdown-item"
+                            href="javascript:void(0)"><i
+                              class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i
+                              class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
                           <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a> -->
-                          <a data-toggle="modal" data-target="#newContrctPop" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-content-copy mr-2 font-18 text-muted vertical-middle"></i>Copy Contract</a>
+                          <a (click)="copyContract()" class="dropdown-item"
+                            ><i
+                              class="mdi mdi-content-copy mr-2 font-18 text-muted vertical-middle"></i>Copy Contract</a>
                         </div>
                       </div>
 
@@ -144,15 +151,20 @@
                         <i class="fa fa-ellipsis-h" [popover]="myPopover" [popoverOnHover]="false" aria-hidden="true"></i>
                       </div> -->
                       <div class="btn-group dropdown">
-                        <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                            class="mdi mdi-dots-horizontal"></i></a>
+                        <a href="javascript: void(0);" class="table-action-btn dropdown-toggle" data-toggle="dropdown"
+                          aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a data-toggle="modal" data-target="#update-contract-modal"class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
-                          <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
+                          <a data-toggle="modal" data-target="#update-contract-modal" class="dropdown-item"
+                            href="javascript:void(0)"><i
+                              class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit</a>
+                          <a class="dropdown-item" href="javascript:void(0)"><i
+                              class="mdi mdi-view-list mr-2 text-muted font-18 vertical-middle"></i>View</a>
                           <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-printer mr-2 text-muted font-18 vertical-middle"></i>Print</a>
                           <a class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-file-cancel mr-2 font-18 text-muted vertical-middle"></i>Cancel</a>
                           <a (click)="delete(i)" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-delete mr-2 font-18 text-muted vertical-middle"></i>Delete</a> -->
-                          <a data-toggle="modal" data-target="#copy-contract-modal" class="dropdown-item" href="javascript:void(0)"><i class="mdi mdi-content-copy mr-2 font-18 text-muted vertical-middle"></i>Copy Contract</a>
+                          <a class="dropdown-item"
+                            (click)="copyContract()"><i
+                              class="mdi mdi-content-copy mr-2 font-18 text-muted vertical-middle"></i>Copy Contract</a>
                         </div>
                       </div>
 
@@ -185,7 +197,8 @@
                   </li>
                   <li class="page-item">
                     <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true"><img src="./assets/images/utilities/feather-arrow-right-small.png"></span>
+                      <span aria-hidden="true"><img
+                          src="./assets/images/utilities/feather-arrow-right-small.png"></span>
                       <span class="sr-only">Next</span>
                     </a>
                   </li>
@@ -193,19 +206,9 @@
               </nav>
             </div>
           </div>
-
-
-
-
         </div>
-
-
       </div>
-
     </div>
-
-
-
   </div>
 
 </div> <!-- end container-fluid -->
@@ -217,22 +220,19 @@
 </ng-container>
 
 <ng-container>
-  <div id="copy-contract-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+  <div id="copy-contract-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"
+    style="display: none;">
     <app-copy-contract></app-copy-contract>
   </div>
 </ng-container>
 <ng-container>
-    <div id="copy-renew-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-     <app-renew-contract></app-renew-contract>
-    </div>
-  </ng-container>
-  
-  <ng-container>
-    <div id="update-contract-modal" class="modal fade ticket-dialog" tabindex="-1" role="dialog" aria-hidden="true">
-     <app-update-contract></app-update-contract>
-    </div>
-  </ng-container>
+  <div id="copy-renew-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <app-renew-contract></app-renew-contract>
+  </div>
+</ng-container>
 
-
-<!-- popover with dynamic html content -->
-<br/><br/>
+<ng-container>
+  <div id="update-contract-modal" class="modal fade ticket-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <app-update-contract></app-update-contract>
+  </div>
+</ng-container>

@@ -21,6 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -66,7 +68,9 @@ import { CopyContractComponent } from './pages/copy-contract/copy-contract.compo
 import { RenewContractComponent } from './pages/renew-contract/renew-contract.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateContractComponent } from './pages/update-contract/update-contract.component';
-import { LayerComponent } from './pages/layers/layer/layer.component'
+import { LayerComponent } from './pages/layers/layer/layer.component';
+import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
+import { AllContractsComponent } from './pages/all-contracts/all-contracts.component'
 
 
 @NgModule({
@@ -117,7 +121,9 @@ import { LayerComponent } from './pages/layers/layer/layer.component'
     CopyContractComponent,
     RenewContractComponent,
     UpdateContractComponent,
-    LayerComponent
+    LayerComponent,
+    ContractInfoComponent,
+    AllContractsComponent
   ],
   imports: [
     AppRoutingModule,
@@ -140,7 +146,9 @@ import { LayerComponent } from './pages/layers/layer/layer.component'
     MatTableModule,
     MatPaginatorModule,
     MatAutocompleteModule,
-    MatRadioModule
+    MatRadioModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

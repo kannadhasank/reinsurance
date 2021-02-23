@@ -1,231 +1,168 @@
-<div class="modal-dialog modal-xl" id="createContract">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h4 class="modal-title text-center" id="myModalLabel">Contract Creation</h4>
-    </div>
-    <div class="modal-body ">
-      <form class="form-horizontal" [formGroup]="createForm">
-        <span *ngIf="showErrorValidationMsg" class="error-msg mb-3">
-          {{showErrorValidationMsg}}
-        </span>
-        <div class="form-group row">
-          <div class="col-md-6">
-            <!-- <label for="username">Contract Affiliate <span class="text-danger">*</span></label>
-            <select class="form-control" formControlName="affiliateID" placeholder="Common area maintenance">
-              <option> Contract Affiliate</option>
-              <option> Option 1</option>
-              <option> Option 2</option>
-              <option> Option 3</option>
-            </select> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Contract Affiliate<span class="text-danger">*</span></mat-label>
-              <mat-select formControlName="affiliateID">
-                <mat-option value="option">Option 1</mat-option>
-                <mat-option value="option">Option 2</mat-option>
-                <mat-option value="option">Option 3</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="col-md-3">
-            <!-- <label for="emailaddress">Contract Type <span class="text-danger">*</span></label>
-            <select class="form-control" formControlName="contractTypeID" placeholder="">
-              <option> Select Contract Type</option>
-              <option> Option 1</option>
-              <option> Option 2</option>
-              <option> Option 3</option>
-            </select> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Contract Type<span class="text-danger">*</span></mat-label>
-              <mat-select formControlName="contractTypeID">
-                <mat-option value="option">Option 1</mat-option>
-                <mat-option value="option">Option 2</mat-option>
-                <mat-option value="option">Option 3</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="col-3">
-            <!-- <label for="emailaddress">Contract Code <span class="text-danger">*</span></label>
-            <input type="text" class="form-control" formControlName="contractCode" id="date-ticket" name="date-ticket"> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Contract Code<span class="text-danger">*</span></mat-label>
-              <input matInput placeholder="Contract Code" formControlName="contractCode">
-            </mat-form-field>
-          </div>
-          <!-- <div class="col-md-3">
-              <label for="emailaddress" class="text-danger">Business Group</label>
-              <select class="form-control" formControlName="ContractAffiliate" placeholder="Common area maintenance">
-                <option> Select Business Group</option>
-                <option> Option 1</option>
-                <option> Option 2</option>
-                <option> Option 3</option>
-              </select>
-            </div> -->
-        </div>
-        <!-- <div class="form-group row">
-            <div class="form-radio-buttons">
-              <div class="mt-3">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadio1">Regular Request</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadio2">Emergency Request</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                  <label class="custom-control-label" for="customRadio3">Retroactive Upload</label>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-        <div class="form-group row">
-          <div class="col-3">
-            <!-- <label for="emailaddress">Contract Name <span class="text-danger">*</span></label>
-            <div class="input-group">
-              <input type="text" id="date-ticket" formControlName="contractName" name="Contract-Name">
-            </div> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Contract Name<span class="text-danger">*</span></mat-label>
-              <input matInput placeholder="Contract Name" formControlName="contractName">
-            </mat-form-field>
-          </div>
-          <div class="col-3 requestType">
-            <!-- <label for="emailaddress">Renewal Type <span class="text-danger">*</span></label>
-            <select class="form-control" formControlName="RenewalType" placeholder="Renewal Type">
-              <option> Select Business Group</option>
-              <option> Option 1</option>
-              <option> Option 2</option>
-              <option> Option 3</option>
-            </select> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Renewal Type<span class="text-danger">*</span></mat-label>
-              <mat-select formControlName="renewalTypeCode">
-                <mat-option value="option">Option 1</mat-option>
-                <mat-option value="option">Option 2</mat-option>
-                <mat-option value="option">Option 3</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="col-3">
-            <!-- <label for="emailaddress">Effective Date <span class="text-danger">*</span></label>
-            <input type="date" class="form-control" id="date-ticket" name="date-ticket" formControlName="effectiveDate"> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Effective Date<span class="text-danger">*</span></mat-label>
-              <input matInput [matDatepicker]="picker1" (focus)="picker1.open()" formControlName="effectiveDate">
-              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-              <mat-datepicker #picker1></mat-datepicker>
-            </mat-form-field>
-          </div>
-          <div class="col-3">
-            <!-- <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
-            <input type="date" class="form-control" formControlName="expirationDate" id="date-ticket"
-              name="date-ticket"> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Expiration Date<span class="text-danger">*</span></mat-label>
-              <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" formControlName="expirationDate">
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <!-- <div class="col-3 form-group date-picker">
-              <label for="emailaddress">Aniversary Date</label>
-              <div class="input-group">
-                <input type="date" id="date-ticket" formControlName="ContractAffiliate" name="Contract-Name" >
-              </div>
-            </div>
-            <div class="col-3">
-              <label for="emailaddress">Signature Date <span class="text-danger">*</span></label>
-              <input type="date" class="form-control"  formControlName="ContractAffiliate" id="date-ticket" name="date-ticket" >
-            </div> -->
-
-          <div class="col-3 requestType">
-            <!-- <label for="Layer-12">Aggregated Claim Method</label>
-             <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method">
-              <option>Select Aggregated Claim Method</option>
-              <option> Option 1</option>
-              <option> Option 2</option>
-              <option> Option 3</option>
-            </select> -->
-            <mat-form-field appearance="legacy" class="example-full-width">
-              <mat-label>Aggregated Claim Method</mat-label>
-              <mat-select formControlName="aggregatedClaimMethod">
-                <mat-option value="option">Option 1</mat-option>
-                <mat-option value="option">Option 2</mat-option>
-                <mat-option value="option">Option 3</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div class="col-3 requestType mt-2">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck1" formControlName="ibnrExclusionFlag">
-              <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group row mb-0">
-        </div>
-
-        <!-- <div class="card-box">
-              <h4 class="header-title mb-4">Billing Compilation</h4>    
-<div class="form-group row request-types">
-  <div class="col-6">
-      <div class="col-6 requestType">
-         
-          <h6 class="mb-2">Billing Level</h6>
-       
-           </div>
-     <div class="col-6 requestType">
-       <div class="custom-control custom-checkbox">
-           <input type="checkbox"  class="custom-control-input" id="customCheck77">
-           <label class="custom-control-label" for="customCheck77"> Bill Across Layer</label>
-         </div>
-     
-     </div>
-     <div class="col-6">
-       <div class="custom-control custom-checkbox">
-           <input type="checkbox"  class="custom-control-input" id="customCheck2">
-           <label class="custom-control-label" for="customCheck2"> Bill Across Underwriting Year</label>
-         </div>
-     </div>
+<div class="card-box mt-3 mx-2">
+  <div class="text-center">
+    <h2><b>Create Contract</b></h2>
   </div>
-  
+  <hr>
+  <div class="container-fluid mt-2">
+    <form class="form-horizontal" [formGroup]="createForm">
+      <span *ngIf="showErrorValidationMsg" class="error-msg mb-5">
+        {{showErrorValidationMsg}}
+      </span>
+      <div class="form-group row mt-3">
+        <div class="col-md-6">
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Contract Affiliate<span class="text-danger">*</span></mat-label>
+            <mat-select formControlName="affiliateID">
+              <mat-option value="option">Option 1</mat-option>
+              <mat-option value="option">Option 2</mat-option>
+              <mat-option value="option">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-3">
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Contract Type<span class="text-danger">*</span></mat-label>
+            <mat-select formControlName="contractTypeID">
+              <mat-option value="option">Option 1</mat-option>
+              <mat-option value="option">Option 2</mat-option>
+              <mat-option value="option">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Contract Code<span class="text-danger">*</span></mat-label>
+            <input matInput placeholder="Contract Code" formControlName="contractCode">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-3">
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Contract Name<span class="text-danger">*</span></mat-label>
+            <input matInput placeholder="Contract Name" formControlName="contractName">
+          </mat-form-field>
+        </div>
+        <div class="col-3 requestType">
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Renewal Type<span class="text-danger">*</span></mat-label>
+            <mat-select formControlName="renewalTypeCode">
+              <mat-option value="option">Option 1</mat-option>
+              <mat-option value="option">Option 2</mat-option>
+              <mat-option value="option">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Effective Date<span class="text-danger">*</span></mat-label>
+            <input matInput [matDatepicker]="picker1" (focus)="picker1.open()" formControlName="effectiveDate">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <!-- <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
+      <input type="date" class="form-control" formControlName="expirationDate" id="date-ticket"
+        name="date-ticket"> -->
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Expiration Date<span class="text-danger">*</span></mat-label>
+            <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" formControlName="expirationDate">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <!-- <div class="col-3 form-group date-picker">
+        <label for="emailaddress">Aniversary Date</label>
+        <div class="input-group">
+          <input type="date" id="date-ticket" formControlName="ContractAffiliate" name="Contract-Name" >
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="emailaddress">Signature Date <span class="text-danger">*</span></label>
+        <input type="date" class="form-control"  formControlName="ContractAffiliate" id="date-ticket" name="date-ticket" >
+      </div> -->
+
+        <div class="col-3 requestType">
+          <!-- <label for="Layer-12">Aggregated Claim Method</label>
+       <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method">
+        <option>Select Aggregated Claim Method</option>
+        <option> Option 1</option>
+        <option> Option 2</option>
+        <option> Option 3</option>
+      </select> -->
+          <mat-form-field appearance="legacy" class="example-full-width">
+            <mat-label>Aggregated Claim Method</mat-label>
+            <mat-select formControlName="aggregatedClaimMethod">
+              <mat-option value="option">Option 1</mat-option>
+              <mat-option value="option">Option 2</mat-option>
+              <mat-option value="option">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col mt-2">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1" formControlName="ibnrExclusionFlag">
+            <label class="custom-control-label" for="customCheck1">IBNR Excluded</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row mb-0">
+      </div>
+
+      <!-- <div class="card-box">
+        <h4 class="header-title mb-4">Billing Compilation</h4>    
+<div class="form-group row request-types">
+<div class="col-6">
+<div class="col-6 requestType">
+   
+    <h6 class="mb-2">Billing Level</h6>
+ 
+     </div>
+<div class="col-6 requestType">
+ <div class="custom-control custom-checkbox">
+     <input type="checkbox"  class="custom-control-input" id="customCheck77">
+     <label class="custom-control-label" for="customCheck77"> Bill Across Layer</label>
+   </div>
+
+</div>
+<div class="col-6">
+ <div class="custom-control custom-checkbox">
+     <input type="checkbox"  class="custom-control-input" id="customCheck2">
+     <label class="custom-control-label" for="customCheck2"> Bill Across Underwriting Year</label>
+   </div>
+</div>
+</div>
+
 
 <div class="col-6">
-    <div class="col-6 requestType">
-        <h6 class="mb-2">Billing Support Document</h6>
-         </div>
-      
-      <div class="col-6">
-      <div class="custom-control custom-checkbox">
-      <input type="checkbox"  class="custom-control-input" id="customCheck3">
-      <label class="custom-control-label" for="customCheck3"> Supporting Document Required</label>
-      </div>
-      </div>
+<div class="col-6 requestType">
+  <h6 class="mb-2">Billing Support Document</h6>
+   </div>
+
+<div class="col-6">
+<div class="custom-control custom-checkbox">
+<input type="checkbox"  class="custom-control-input" id="customCheck3">
+<label class="custom-control-label" for="customCheck3"> Supporting Document Required</label>
+</div>
+</div>
 </div>
 </div>
 
 </div> -->
 
-        <div class="row mb-2">
-          <div class="col-md-6">
-            <h4 class="header-title pt-1"></h4>
-          </div>
-          <div class="col-md-6 text-right">
-            <!-- <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button> -->
-            <button type="button" class="btn btn-orange mr-2" (click)="createContract()">Create
-              Contract</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          </div>
+      <div class="row mb-2 mt-4">
+        <div class="col-12 text-center">
+          <!-- <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button> -->
+          <button type="button" class="btn btn-orange mr-2" (click)="createContract()">Create
+            Contract</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
-  <!-- /.modal-content -->
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BaseService } from '../../shared/base.service';
 declare var $:any;
 
@@ -10,7 +11,10 @@ declare var $:any;
 })
 export class ContractComponent implements OnInit {
 
-  constructor(public _baseService: BaseService) { }
+  constructor(
+    public _baseService: BaseService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     $('[data-toggle="popover"]').popover();
@@ -19,6 +23,10 @@ export class ContractComponent implements OnInit {
 
 delete(i){
   this._baseService.tableArray.splice(i,1)
-
 }
+
+copyContract(){
+  this.router.navigate(['/dashboard/create-contract']);
+}
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
@@ -16,7 +17,9 @@ export class CopyContractComponent implements OnInit {
   options: string[] = ['Equipment Breakdown', 'Test Contract', 'Test Contract 1'];
   filteredOptions: Observable<string[]>;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.filteredOptions = this.myControl.valueChanges
@@ -28,8 +31,11 @@ export class CopyContractComponent implements OnInit {
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+  copyContract() {
+    this.router.navigate(['/dashboard/create-contract']);
   }
 
 }

@@ -93,13 +93,12 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-info waves-effect waves-light" data-toggle="modal"
-                data-target="#newContrctPop" data-dismiss="modal">Copy Contract</button>
+            <button type="button" class="btn btn-info waves-effect waves-light" (click)="copyContract()" data-dismiss="modal">Copy Contract</button>
         </div>
     </div>
 </div>
-<ng-container>
+<!-- <ng-container>
     <div id="newContrctPop" class="modal fade ticket-dialog" tabindex="-1" role="dialog" aria-hidden="true">
         <app-create-contract></app-create-contract>
     </div>
-</ng-container>
+</ng-container> -->

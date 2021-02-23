@@ -14,11 +14,15 @@ import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-g
 import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
 import { TermsComponent } from './layers/terms/terms.component';
 import { LayerComponent } from './pages/layers/layer/layer.component';
+import { HeaderComponent } from './common/header/header.component';
+import { CreateContractComponent } from './pages/create-contract/create-contract.component';
+import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
+import { AllContractsComponent } from './pages/all-contracts/all-contracts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full' },
   {
-    path: 'dashboard', component: DashboardComponent, children: [
+    path: 'dashboard', component: HeaderComponent, children: [
       { path: '', component: UserSetupComponent },
       { path: 'contract', component: ContractComponent },
       { path: 'Layer', component: LayerSummaryComponent },
@@ -29,7 +33,10 @@ const routes: Routes = [
       { path: 'attachment', component: AttachmentGuideComponent },
       { path: 'namedInsured', component: NamedInsuredComponent },
       { path: 'terms', component: TermsComponent },
-      { path: 'layer-new', component: LayerComponent }
+      { path: 'layer-new', component: LayerComponent },
+      { path: 'create-contract', component: CreateContractComponent },
+      { path: 'contracts', component: AllContractsComponent },
+      { path: 'contract-info', component: ContractInfoComponent }
     ]
   },
 
