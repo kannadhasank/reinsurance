@@ -11,8 +11,8 @@ export class AllContractsComponent implements OnInit {
 
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns: string[] = ['contractCode', 'uwYear', 'formerCode', 'contractName', 'effectiveDate', 'expirationDate', 'status', 'action'];
-  dataSource;
+  columns: any[] = ['contractCode', 'uwYear', 'formerCode', 'contractName', 'effectiveDate', 'expirationDate', 'status', 'action'];
+  dataSource: any;
 
   constructor(
     private router: Router

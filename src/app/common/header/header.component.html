@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand ml-4" href="#">
     <b>RMS</b>
-      <span class="vertical-line ml-3"></span>
+    <span class="vertical-line ml-3"></span>
   </a>
-  
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,135 +11,140 @@
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <!-- <div class="mx-auto d-sm-flex d-block flex-sm-nowrap"> -->
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item dropdown mr-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <b>Contract</b>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/dashboard/create-contract">Create Contract</a>
-            <a class="dropdown-item" routerLink="/dashboard/contracts">Open Contract</a>
-            <a class="dropdown-item" data-toggle="modal" data-target="#copy-contract">Copy Contract</a>
-            <a class="dropdown-item" routerLink="/dashboard/contract">Contract Dashboard</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown mr-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <b>Claims</b>
-          </a>
-        </li>
-        <li class="nav-item dropdown mr-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <b>Master Data</b>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Organizations/Participants</a>
-            <a class="dropdown-item" href="#">Named Insureds</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <b>Reports</b>
-          </a>
-        </li>
-      </ul>
-    <!-- </div> -->
-    <div class="row mt-2 mr-4">
-      <li class="dropdown notification-list">
-        <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
-          aria-haspopup="false" aria-expanded="false">
-          <i class="dripicons-bell noti-icon" style="color: black;"></i>
-          <span class="badge badge-pink rounded-circle noti-icon-badge">4</span>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <b>Contract</b>
         </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-lg notification_lists">
-          <div class="dropdown-header noti-title">
-            <h5 class="text-overflow m-0"><span class="float-right">
-                <span class="badge badge-danger float-right">5</span>
-              </span>Notification</h5>
-          </div>
-          <div class="slimscroll noti-scroll">
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon bg-success"><i class="mdi mdi-comment-account-outline"></i></div>
-              <p class="notify-details">Robert S. Taylor commented on Admin<small class="text-muted">1 min ago</small>
-              </p>
-            </a>
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon bg-primary">
-                <i class="mdi mdi-settings-outline"></i>
-              </div>
-              <p class="notify-details">New settings
-                <small class="text-muted">There are new settings available</small>
-              </p>
-            </a>
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon bg-warning">
-                <i class="mdi mdi-bell-outline"></i>
-              </div>
-              <p class="notify-details">Updates
-                <small class="text-muted">There are 2 new updates available</small>
-              </p>
-            </a>
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon">
-                <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
-              </div>
-              <p class="notify-details">Karen Robinson</p>
-              <p class="text-muted mb-0 user-msg">
-                <small>Wow ! this admin looks good and awesome design</small>
-              </p>
-            </a>
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon bg-danger">
-                <i class="mdi mdi-account-plus"></i>
-              </div>
-              <p class="notify-details">New user
-                <small class="text-muted">You have 10 unread messages</small>
-              </p>
-            </a>
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon bg-info">
-                <i class="mdi mdi-comment-account-outline"></i>
-              </div>
-              <p class="notify-details">Caleb Flakelar commented on Admin
-                <small class="text-muted">4 days ago</small>
-              </p>
-            </a>
-            <a href="javascript:void(0);" class="dropdown-item notify-item">
-              <div class="notify-icon bg-secondary">
-                <i class="mdi mdi-heart"></i>
-              </div>
-              <p class="notify-details">Carlos Crouch liked
-                <b>Admin</b>
-                <small class="text-muted">13 days ago</small>
-              </p>
-            </a>
-          </div>
-          <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-            View all
-            <i class="fi-arrow-right"></i>
-          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/dashboard/create-contract">Create Contract</a>
+          <a class="dropdown-item" routerLink="/dashboard/contracts">Open Contract</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#copy-contract">Copy Contract</a>
+          <a class="dropdown-item" routerLink="/dashboard/contract">Contract Dashboard</a>
         </div>
       </li>
-      <li class="dropdown notification-list">
-        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
-          role="button" aria-haspopup="false" aria-expanded="false">
-          <img src="assets/images/user_pf.png" alt="pf" class="rounded-circle">
-          <span class="pro-user-name ml-1" style="color: black;">
-            XYZ <i class="mdi mdi-chevron-down"></i>
-          </span>
+      <li class="nav-item mr-3">
+        <a class="nav-link" href="#">
+          <b>Claims</b>
         </a>
-        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+      </li>
+      <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <b>Master Data</b>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li class="nav-item dropdown-submenu">
+        <a class="dropdown-item dropdown-toggle" id="submenuDropdown" href="#" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="true">Organizations/Participants</a>
+        <div class="dropdown-menu" aria-labelledby="submenuDropdown">
+          <a class="dropdown-item" href="#">Broker</a>
+          <a class="dropdown-item" href="#">Reinsurer</a>
+        </div>
+      </li>
+      <a class="dropdown-item" href="#">Named Insureds</a>
+  </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">
+      <b>Reports</b>
+    </a>
+  </li>
+  </ul>
+  <!-- </div> -->
+  <div class="row mt-2 mr-4">
+    <li class="dropdown notification-list">
+      <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
+        aria-haspopup="false" aria-expanded="false">
+        <i class="dripicons-bell noti-icon" style="color: black;"></i>
+        <span class="badge badge-pink rounded-circle noti-icon-badge">4</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right dropdown-lg notification_lists">
+        <div class="dropdown-header noti-title">
+          <h5 class="text-overflow m-0"><span class="float-right">
+              <span class="badge badge-danger float-right">5</span>
+            </span>Notification</h5>
+        </div>
+        <div class="slimscroll noti-scroll">
           <a href="javascript:void(0);" class="dropdown-item notify-item">
-            <i class="fe-log-out"></i>
-            <span>Logout</span>
+            <div class="notify-icon bg-success"><i class="mdi mdi-comment-account-outline"></i></div>
+            <p class="notify-details">Robert S. Taylor commented on Admin<small class="text-muted">1 min ago</small>
+            </p>
+          </a>
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <div class="notify-icon bg-primary">
+              <i class="mdi mdi-settings-outline"></i>
+            </div>
+            <p class="notify-details">New settings
+              <small class="text-muted">There are new settings available</small>
+            </p>
+          </a>
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <div class="notify-icon bg-warning">
+              <i class="mdi mdi-bell-outline"></i>
+            </div>
+            <p class="notify-details">Updates
+              <small class="text-muted">There are 2 new updates available</small>
+            </p>
+          </a>
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <div class="notify-icon">
+              <img src="assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt="" />
+            </div>
+            <p class="notify-details">Karen Robinson</p>
+            <p class="text-muted mb-0 user-msg">
+              <small>Wow ! this admin looks good and awesome design</small>
+            </p>
+          </a>
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <div class="notify-icon bg-danger">
+              <i class="mdi mdi-account-plus"></i>
+            </div>
+            <p class="notify-details">New user
+              <small class="text-muted">You have 10 unread messages</small>
+            </p>
+          </a>
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <div class="notify-icon bg-info">
+              <i class="mdi mdi-comment-account-outline"></i>
+            </div>
+            <p class="notify-details">Caleb Flakelar commented on Admin
+              <small class="text-muted">4 days ago</small>
+            </p>
+          </a>
+          <a href="javascript:void(0);" class="dropdown-item notify-item">
+            <div class="notify-icon bg-secondary">
+              <i class="mdi mdi-heart"></i>
+            </div>
+            <p class="notify-details">Carlos Crouch liked
+              <b>Admin</b>
+              <small class="text-muted">13 days ago</small>
+            </p>
           </a>
         </div>
-      </li>
-    </div>
+        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+          View all
+          <i class="fi-arrow-right"></i>
+        </a>
+      </div>
+    </li>
+    <li class="dropdown notification-list">
+      <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
+        role="button" aria-haspopup="false" aria-expanded="false">
+        <img src="assets/images/user_pf.png" alt="pf" class="rounded-circle">
+        <span class="pro-user-name ml-1" style="color: black;">
+          XYZ <i class="mdi mdi-chevron-down"></i>
+        </span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+        <a href="javascript:void(0);" class="dropdown-item notify-item">
+          <i class="fe-log-out"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </li>
+  </div>
   </div>
 </nav>
 <div class="content-page">

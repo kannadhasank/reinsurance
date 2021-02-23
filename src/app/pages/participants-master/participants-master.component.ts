@@ -11,6 +11,7 @@ export class ParticipantsMasterComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   displayedColumns: string[] = ['contractCode', 'uwYear', 'formerCode', 'contractName', 'effectiveDate', 'expirationDate', 'status', 'action'];
   dataSource;
+  showUpdateBtn: boolean;
 
   constructor() { }
 
@@ -18,10 +19,19 @@ export class ParticipantsMasterComponent implements OnInit, AfterViewInit {
     this.dataSource = [
       {contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: ''}
     ];
+    this.showUpdateBtn = false;
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  editParticipant(){
+    this.showUpdateBtn = true;
+  }
+
+  updateParticipant(){
+    this.showUpdateBtn = false;
   }
  
 }

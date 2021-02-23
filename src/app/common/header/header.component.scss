@@ -27,3 +27,9 @@
 .nav-link{
     font-size: medium;
 }
+
+.dropdown-toggle:after {
+    content: "\F140" !important;
+    display: inline-block !important;
+    font-family: "Material Design Icons";
+  }
