@@ -18,6 +18,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { CreateContractComponent } from './pages/create-contract/create-contract.component';
 import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 import { AllContractsComponent } from './pages/all-contracts/all-contracts.component';
+import { UpdateContractComponent } from './pages/update-contract/update-contract.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full' },
@@ -36,7 +37,8 @@ const routes: Routes = [
       { path: 'layer-new', component: LayerComponent },
       { path: 'create-contract', component: CreateContractComponent },
       { path: 'contracts', component: AllContractsComponent },
-      { path: 'contract-info', component: ContractInfoComponent }
+      { path: 'contract-info', component: ContractInfoComponent },
+      { path: 'update-contract', component: UpdateContractComponent }
     ]
   },
 

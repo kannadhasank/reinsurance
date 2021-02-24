@@ -14,13 +14,13 @@ declare var $: any;
 export class CreateContractComponent implements OnInit {
 
   public createForm: FormGroup;
-  showErrorValidationMsg: string;
+  //showErrorValidationMsg: string;
 
   constructor(public Fb: FormBuilder, public _baseService: BaseService, public http: HttpClient) { }
 
   ngOnInit(): void {
     this.createFormMethod();
-    this.showErrorValidationMsg = '';
+    //this.showErrorValidationMsg = '';
   }
 
 
@@ -42,9 +42,10 @@ export class CreateContractComponent implements OnInit {
   createContract() {
     console.log("valid/not = "+this.createForm.valid)
     if (this.createForm.invalid) {
-      this.showErrorValidationMsg = "Please enter all mandatory fields";
+     // this.showErrorValidationMsg = "Please enter all mandatory fields";
+     Swal.fire('Warning', 'Please fill the required fields', 'warning');
     } else {
-      this.showErrorValidationMsg = '';
+     // this.showErrorValidationMsg = '';
       $("createContract").modal('hide');
       Swal.fire('Success', 'Contract Created Successfully', 'success');
       this._baseService.tableArray.push(this.createForm.value);

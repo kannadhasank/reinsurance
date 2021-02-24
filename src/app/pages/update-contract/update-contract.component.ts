@@ -22,7 +22,7 @@ export class UpdateContractComponent implements OnInit {
   renewalTypeCode;
   aggregatedClaimMethod;
   contractCodes: { name: string; code: string; }[];
-  showErrorValidationMsg: string;
+  //showErrorValidationMsg: string;
 
   constructor(
     public fb: FormBuilder
@@ -36,7 +36,7 @@ export class UpdateContractComponent implements OnInit {
       {name: 'Option 2', code: '2'},
       {name: 'Option 3', code: '3'},
   ];
-  this.showErrorValidationMsg = '';
+ // this.showErrorValidationMsg = '';
   }
 
   formMethod() {
@@ -57,13 +57,14 @@ export class UpdateContractComponent implements OnInit {
   updateContract() {
     console.log(this.updateContractForm.valid)
     if (this.updateContractForm.valid) {
-      this.showErrorValidationMsg = '';
+     // this.showErrorValidationMsg = '';
       this.submitted = false;
       // $("#editContractModal").modal("hide");
       Swal.fire('Success', 'Contract Updated Successfully!', 'success');
       //this.updateContractForm.reset();
     } else{
-      this.showErrorValidationMsg = "Please enter all mandatory fields";
+      Swal.fire('Warning', 'Please fill the required fields', 'warning');
+     // this.showErrorValidationMsg = "Please enter all mandatory fields";
     }
   }
 

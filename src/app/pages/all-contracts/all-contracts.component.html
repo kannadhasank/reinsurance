@@ -18,7 +18,7 @@
                             <mat-icon>more_vert</mat-icon>
                         </button>
                         <mat-menu #menu="matMenu">
-                            <button mat-menu-item data-toggle="modal" data-target="#update-contract-modal">
+                            <button mat-menu-item routerLink="/dashboard/update-contract">
                                 <mat-icon>create</mat-icon>
                                 <span>Edit</span>
                             </button>
@@ -43,8 +43,8 @@
     </div>
 </div>
 
-<ng-container>
+<!-- <ng-container>
     <div id="update-contract-modal" class="modal fade ticket-dialog" tabindex="-1" role="dialog" aria-hidden="true">
         <app-update-contract></app-update-contract>
     </div>
-</ng-container>
+</ng-container> -->
