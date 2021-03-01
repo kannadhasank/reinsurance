@@ -4,26 +4,9 @@
     </div>
     <hr>
     <div class="container-fluid mt-2">
-        <!-- <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title text-center" id="myModalLabel">Edit Contract</h4>
-            <label for="">Last Modified: <span>Test 02/11/2021 02:50:10</span></label>
-        </div>
-        <div class="modal-body"> -->
-
         <form class="form-horizontal" [formGroup]="updateContractForm">
-            <!-- <span *ngIf="showErrorValidationMsg" class="error-msg mb-3">
-                    {{showErrorValidationMsg}}
-                  </span> -->
             <div class="form-group row">
                 <div class="col-md-6">
-                    <!-- <span class="p-float-label">
-                            <p-dropdown inputId="affiliateID" [autoDisplayFirst]="false" [options]="contractCodes"
-                                 optionLabel="name" formControlName="affiliateID"
-                            ></p-dropdown>
-                            <label for="affiliateID">Contract Affiliate</label>
-                        </span> -->
                     <mat-form-field appearance="legacy" class="example-full-width">
                         <mat-label>Contract Affiliate<span class="text-danger">*</span></mat-label>
                         <mat-select formControlName="affiliateID">
@@ -31,14 +14,7 @@
                             <mat-option value="option">Option 2</mat-option>
                             <mat-option value="option">Option 3</mat-option>
                         </mat-select>
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.affiliateID.invalid">
-                                Please Select
-                                Affiliate
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.affiliateID.invalid">Please select Contract
-                            Affiliate</span> -->
                 </div>
                 <div class="col-3">
                     <mat-form-field appearance="legacy" class="example-full-width">
@@ -48,26 +24,13 @@
                             <mat-option value="option">Option 2</mat-option>
                             <mat-option value="option">Option 3</mat-option>
                         </mat-select>
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.contractTypeID.invalid">
-                                Please Select
-                                Contract Type
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.contractTypeID.invalid">Please select
-                            Contract Type</span> -->
                 </div>
                 <div class="col-3">
                     <mat-form-field appearance="legacy" class="example-full-width">
                         <mat-label>Contract Code<span class="text-danger">*</span></mat-label>
                         <input matInput placeholder="Contract Code" formControlName="contractCode">
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.contractCode.invalid">
-                                Contract Code cannot be blank
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.contractCode.invalid">Contract Code cannot
-                            be blank</span> -->
                 </div>
             </div>
 
@@ -76,16 +39,7 @@
                     <mat-form-field appearance="legacy" class="example-full-width">
                         <mat-label>Contract Name<span class="text-danger">*</span></mat-label>
                         <input matInput placeholder="Contract Name" formControlName="contractName">
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.contractName.invalid">
-                                Contract Name
-                                cannot
-                                be blank
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.contractName.invalid">Contract Name
-                            cannot
-                            be blank</span> -->
                 </div>
                 <div class="col-3">
                     <mat-form-field appearance="legacy" class="example-full-width">
@@ -95,14 +49,7 @@
                             <mat-option value="option">Option 2</mat-option>
                             <mat-option value="option">Option 3</mat-option>
                         </mat-select>
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.renewalTypeCode.invalid">
-                                Please select
-                                Renewal Type
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.renewalTypeCode.invalid">Please select
-                            Renewal Type</span> -->
                 </div>
                 <div class="col-3">
                     <mat-form-field appearance="legacy" class="example-full-width">
@@ -111,14 +58,7 @@
                             formControlName="effectiveDate">
                         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
                         <mat-datepicker #picker1></mat-datepicker>
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.effectiveDate.invalid">Effective
-                                Date cannot
-                                be blank
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.effectiveDate.invalid">Effective Date cannot
-                            be blank</span> -->
                 </div>
                 <div class="col-3">
                     <mat-form-field appearance="legacy" class="example-full-width">
@@ -127,15 +67,7 @@
                             formControlName="expirationDate">
                         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                         <mat-datepicker #picker2></mat-datepicker>
-                        <!-- <mat-error *ngIf="submitted && updateContractForm.controls.expirationDate.invalid">
-                                Expiration Date cannot
-                                be blank
-                            </mat-error> -->
                     </mat-form-field>
-                    <!-- <span class="error-msg"
-                            *ngIf="submitted && updateContractForm.controls.expirationDate.invalid">Expiration Date
-                            cannot
-                            be blank</span> -->
                 </div>
             </div>
 
@@ -197,7 +129,7 @@
                 <div class="col-md-6 text-right">
                     <button type="button" class="btn btn-orange mr-2" (click)="updateContract()">Update
                         Contract</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary">Clear</button>
                 </div>
             </div>
         </form>
