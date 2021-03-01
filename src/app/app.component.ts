@@ -9,16 +9,20 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
   title = 'project1';
 
-  constructor(public _uiService: UiService, public router: Router) {
+  constructor(public _uiService: UiService, public router:Router) {
 
     this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
+     
         this._uiService.initUIFunctions();
+
       }
     });
+
+
+
   }
 
 }
