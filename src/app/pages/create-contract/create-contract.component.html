@@ -62,9 +62,6 @@
           </mat-form-field>
         </div>
         <div class="col-3">
-          <!-- <label for="emailaddress">Expiration Date <span class="text-danger">*</span></label>
-      <input type="date" class="form-control" formControlName="expirationDate" id="date-ticket"
-        name="date-ticket"> -->
           <mat-form-field appearance="legacy" class="example-full-width">
             <mat-label>Expiration Date<span class="text-danger">*</span></mat-label>
             <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" formControlName="expirationDate">
@@ -75,25 +72,7 @@
       </div>
 
       <div class="form-group row">
-        <!-- <div class="col-3 form-group date-picker">
-        <label for="emailaddress">Aniversary Date</label>
-        <div class="input-group">
-          <input type="date" id="date-ticket" formControlName="ContractAffiliate" name="Contract-Name" >
-        </div>
-      </div>
-      <div class="col-3">
-        <label for="emailaddress">Signature Date <span class="text-danger">*</span></label>
-        <input type="date" class="form-control"  formControlName="ContractAffiliate" id="date-ticket" name="date-ticket" >
-      </div> -->
-
         <div class="col-3 requestType">
-          <!-- <label for="Layer-12">Aggregated Claim Method</label>
-       <select class="form-control" id="Layer-12" placeholder="Aggregated Claim Method">
-        <option>Select Aggregated Claim Method</option>
-        <option> Option 1</option>
-        <option> Option 2</option>
-        <option> Option 3</option>
-      </select> -->
           <mat-form-field appearance="legacy" class="example-full-width">
             <mat-label>Aggregated Claim Method</mat-label>
             <mat-select formControlName="aggregatedClaimMethod">
@@ -114,53 +93,11 @@
       <div class="form-group row mb-0">
       </div>
 
-      <!-- <div class="card-box">
-        <h4 class="header-title mb-4">Billing Compilation</h4>    
-<div class="form-group row request-types">
-<div class="col-6">
-<div class="col-6 requestType">
-   
-    <h6 class="mb-2">Billing Level</h6>
- 
-     </div>
-<div class="col-6 requestType">
- <div class="custom-control custom-checkbox">
-     <input type="checkbox"  class="custom-control-input" id="customCheck77">
-     <label class="custom-control-label" for="customCheck77"> Bill Across Layer</label>
-   </div>
-
-</div>
-<div class="col-6">
- <div class="custom-control custom-checkbox">
-     <input type="checkbox"  class="custom-control-input" id="customCheck2">
-     <label class="custom-control-label" for="customCheck2"> Bill Across Underwriting Year</label>
-   </div>
-</div>
-</div>
-
-
-<div class="col-6">
-<div class="col-6 requestType">
-  <h6 class="mb-2">Billing Support Document</h6>
-   </div>
-
-<div class="col-6">
-<div class="custom-control custom-checkbox">
-<input type="checkbox"  class="custom-control-input" id="customCheck3">
-<label class="custom-control-label" for="customCheck3"> Supporting Document Required</label>
-</div>
-</div>
-</div>
-</div>
-
-</div> -->
-
       <div class="row mb-2 mt-4">
         <div class="col-12 text-center">
-          <!-- <button type="button" class="btn btn-warning  mr-2" data-dismiss="modal" >Copy Contract</button> -->
           <button type="button" class="btn btn-orange mr-2" (click)="createContract()">Create
             Contract</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary">Clear</button>
         </div>
       </div>
     </form>
