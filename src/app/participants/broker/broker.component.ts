@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-broker',
@@ -44,6 +45,10 @@ export class BrokerComponent implements OnInit, AfterViewInit {
 
   updateBroker(){
     this.showUpdateBrokerBtn = false;
+  }
+
+  deleteBroker(){
+    Swal.fire('Success', 'Record deleted successfully!', 'success');
   }
 
 }
