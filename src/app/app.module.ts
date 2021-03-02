@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,31 +35,22 @@ import { AddContractComponent } from './pages/add-contract/add-contract.componen
 import { CreateContractComponent } from './pages/create-contract/create-contract.component';
 import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.component';
 import { CreateLayerComponent } from './pages/create-layer/create-layer.component';
-import { DetailsComponent } from './details/details.component';
-import { BillingComponent } from './billing/billing.component';
-import { UWdetailsComponent } from './pages/layers/uwdetails/uwdetails.component';
-import { LayersAliasComponent } from './pages/layers/layers-alias/layers-alias.component';
-import { SettlementDetailsComponent } from './pages/layers/settlement-details/settlement-details.component';
-import { ProcessingOptionComponent } from './pages/layers/processing-option/processing-option.component';
-import { CoadingConditionComponent } from './pages/layers/coading-condition/coading-condition.component';
 import { LayerDetailsComponent } from './pages/layers/layer-details/layer-details.component';
-import { PremiumSettlementDetailsComponent } from './pages/layers/premium-settlement-details/premium-settlement-details.component';
 import { ParticipantSummaryComponent } from './layers/participant-summary/participant-summary.component';
 import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-guide.component';
 import { TermsComponent } from './layers/terms/terms.component';
 import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
 import { AddParticipantComponent } from './participants/add-participant/add-participant.component';
 import { ReinsurerComponent } from './participants/reinsurer/reinsurer.component';
-import { CliamSummaryComponent } from './claim/cliam-summary/cliam-summary.component';
-import { CliamCreateComponent } from './claim/cliam-create/cliam-create.component';
 import { CopyContractComponent } from './pages/copy-contract/copy-contract.component';
 import { RenewContractComponent } from './pages/renew-contract/renew-contract.component';
-import { HttpClientModule } from '@angular/common/http';
 import { UpdateContractComponent } from './pages/update-contract/update-contract.component';
 import { LayerComponent } from './pages/layers/layer/layer.component';
 import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 import { AllContractsComponent } from './pages/all-contracts/all-contracts.component';
 import { BrokerComponent } from './participants/broker/broker.component';
+import { CedingConditionsComponent } from './pages/layers/ceding-conditions/ceding-conditions.component';
+import { ParticipantsMasterComponent } from './pages/participants-master/participants-master.component';
 
 @NgModule({
   declarations: [
@@ -73,23 +65,13 @@ import { BrokerComponent } from './participants/broker/broker.component';
     CreateContractComponent,
     LayerSummaryComponent,
     CreateLayerComponent,
-    DetailsComponent,
-    BillingComponent,
-    UWdetailsComponent,
-    LayersAliasComponent,
-    SettlementDetailsComponent,
-    ProcessingOptionComponent,
-    CoadingConditionComponent,
     LayerDetailsComponent,
-    PremiumSettlementDetailsComponent,
     ParticipantSummaryComponent,
     AttachmentGuideComponent,
     TermsComponent,
     NamedInsuredComponent,
     AddParticipantComponent,
     ReinsurerComponent,
-    CliamSummaryComponent,
-    CliamCreateComponent,
     CopyContractComponent,
     RenewContractComponent,
     LayerComponent,
@@ -97,7 +79,9 @@ import { BrokerComponent } from './participants/broker/broker.component';
     AllContractsComponent,
     BrokerComponent,
     UpdateContractComponent,
-    LayerComponent
+    CedingConditionsComponent,
+    LayerComponent,
+    ParticipantsMasterComponent
   ],
   imports: [
     AppRoutingModule,

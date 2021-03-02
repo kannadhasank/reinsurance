@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ContractComponent } from './pages/contract/contract.component';
 import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.component';
-import { CliamSummaryComponent } from './claim/cliam-summary/cliam-summary.component';
 import { ParticipantSummaryComponent } from './layers/participant-summary/participant-summary.component';
 import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-guide.component';
 import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
@@ -23,7 +24,6 @@ const routes: Routes = [
     path: 'dashboard', component: HeaderComponent, children: [
       { path: 'contract', component: ContractComponent },
       { path: 'Layer', component: LayerSummaryComponent },
-      { path: 'claim-summary', component: CliamSummaryComponent },
       { path: 'participant', component: ParticipantSummaryComponent },
       { path: 'attachment', component: AttachmentGuideComponent },
       { path: 'namedInsured', component: NamedInsuredComponent },
