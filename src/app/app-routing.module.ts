@@ -1,33 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from './pages/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ContractComponent } from './pages/contract/contract.component';
-import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.component';
-import { ParticipantSummaryComponent } from './layers/participant-summary/participant-summary.component';
-import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-guide.component';
-import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
-import { TermsComponent } from './layers/terms/terms.component';
 import { LayerComponent } from './pages/layers/layer/layer.component';
 import { HeaderComponent } from './common/header/header.component';
 import { CreateContractComponent } from './pages/create-contract/create-contract.component';
-import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 import { AllContractsComponent } from './pages/all-contracts/all-contracts.component';
 import { UpdateContractComponent } from './pages/update-contract/update-contract.component';
 import { BrokerComponent } from './participants/broker/broker.component';
 import { ReinsurerComponent } from './participants/reinsurer/reinsurer.component';
+import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full' },
   {
     path: 'dashboard', component: HeaderComponent, children: [
       { path: 'contract', component: ContractComponent },
-      { path: 'Layer', component: LayerSummaryComponent },
-      { path: 'participant', component: ParticipantSummaryComponent },
-      { path: 'attachment', component: AttachmentGuideComponent },
-      { path: 'namedInsured', component: NamedInsuredComponent },
-      { path: 'terms', component: TermsComponent },
       { path: 'layer-new', component: LayerComponent },
       { path: 'create-contract', component: CreateContractComponent },
       { path: 'contracts', component: AllContractsComponent },

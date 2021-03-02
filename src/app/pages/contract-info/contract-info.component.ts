@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contract-info',
@@ -9,12 +7,9 @@ import { Router } from '@angular/router';
 })
 export class ContractInfoComponent implements OnInit {
 
-  constructor(
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
 
 }

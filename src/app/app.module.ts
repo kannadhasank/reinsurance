@@ -31,26 +31,20 @@ import { RightSidebarComponent } from './common/right-sidebar/right-sidebar.comp
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ContractComponent } from './pages/contract/contract.component';
-import { AddContractComponent } from './pages/add-contract/add-contract.component';
 import { CreateContractComponent } from './pages/create-contract/create-contract.component';
-import { LayerSummaryComponent } from './pages/layer-summary/layer-summary.component';
-import { CreateLayerComponent } from './pages/create-layer/create-layer.component';
 import { LayerDetailsComponent } from './pages/layers/layer-details/layer-details.component';
-import { ParticipantSummaryComponent } from './layers/participant-summary/participant-summary.component';
-import { AttachmentGuideComponent } from './layers/attachment-guide/attachment-guide.component';
-import { TermsComponent } from './layers/terms/terms.component';
-import { NamedInsuredComponent } from './layers/named-insured/named-insured.component';
-import { AddParticipantComponent } from './participants/add-participant/add-participant.component';
 import { ReinsurerComponent } from './participants/reinsurer/reinsurer.component';
 import { CopyContractComponent } from './pages/copy-contract/copy-contract.component';
-import { RenewContractComponent } from './pages/renew-contract/renew-contract.component';
 import { UpdateContractComponent } from './pages/update-contract/update-contract.component';
 import { LayerComponent } from './pages/layers/layer/layer.component';
-import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 import { AllContractsComponent } from './pages/all-contracts/all-contracts.component';
 import { BrokerComponent } from './participants/broker/broker.component';
 import { CedingConditionsComponent } from './pages/layers/ceding-conditions/ceding-conditions.component';
-import { ParticipantsMasterComponent } from './pages/participants-master/participants-master.component';
+import { ParticipantsMasterComponent } from './pages/layers/participants-master/participants-master.component';
+import { TermsComponent } from './pages/layers/terms/terms.component';
+import { AttachementGuidelinesComponent } from './pages/layers/attachement-guidelines/attachement-guidelines.component';
+import { NamedInsuredComponent } from './pages/layers/named-insured/named-insured.component';
+import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 
 @NgModule({
   declarations: [
@@ -61,27 +55,22 @@ import { ParticipantsMasterComponent } from './pages/participants-master/partici
     LoginComponent,
     DashboardComponent,
     ContractComponent,
-    AddContractComponent,
     CreateContractComponent,
-    LayerSummaryComponent,
-    CreateLayerComponent,
     LayerDetailsComponent,
-    ParticipantSummaryComponent,
-    AttachmentGuideComponent,
-    TermsComponent,
-    NamedInsuredComponent,
-    AddParticipantComponent,
     ReinsurerComponent,
     CopyContractComponent,
-    RenewContractComponent,
     LayerComponent,
-    ContractInfoComponent,
     AllContractsComponent,
     BrokerComponent,
     UpdateContractComponent,
     CedingConditionsComponent,
     LayerComponent,
-    ParticipantsMasterComponent
+    ParticipantsMasterComponent,
+    LayerDetailsComponent,
+    TermsComponent,
+    AttachementGuidelinesComponent,
+    NamedInsuredComponent,
+    ContractInfoComponent
   ],
   imports: [
     AppRoutingModule,
