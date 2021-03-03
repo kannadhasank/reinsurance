@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand ml-4" href="#">
-    <b>RMS</b>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222831 !important;">
+  <a class="navbar-brand ml-4 circularBold" href="#">
+    RMS
     <span class="vertical-line ml-3"></span>
   </a>
 
@@ -12,35 +12,37 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item dropdown mr-3">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle circularBold" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          <b>Contract</b> </a>
+          Contract</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" routerLink="/dashboard/create-contract">Create Contract</a></li>
-          <li><a class="dropdown-item" routerLink="/dashboard/contracts">Open Contract</a></li>
-          <li><a class="dropdown-item" data-toggle="modal" data-target="#copy-contract">Copy Contract</a></li>
-          <li><a class="dropdown-item" routerLink="/dashboard/contract">Contract Dashboard</a></li>
+          <li><a class="dropdown-item circularBook" routerLink="/dashboard/create-contract">Create Contract</a></li>
+          <li><a class="dropdown-item circularBook" routerLink="/dashboard/contracts">Open Contract</a></li>
+          <li><a class="dropdown-item circularBook" data-toggle="modal" data-target="#copy-contract">Copy Contract</a>
+          </li>
+          <li><a class="dropdown-item circularBook" routerLink="/dashboard/contracts">Contract Dashboard</a></li>
         </ul>
       </li>
       <li class="nav-item mr-3">
-        <a class="nav-link" href="#"><b>Claims</b></a>
+        <a class="nav-link circularBold" href="#">Claims</a>
       </li>
       <li class="nav-item dropdown mr-3">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle circularBold" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          <b>Master Data</b></a>
+          Master Data</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle">Organizations/Participants</a>
+          <li class="dropdown-submenu"><a
+              class="dropdown-item dropdown-toggle circularBook">Organizations/Participants</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/dashboard/broker">Broker</a></li>
-              <li><a class="dropdown-item" routerLink="/dashboard/reinsurer">Reinsurer</a></li>
+              <li><a class="dropdown-item circularBook" routerLink="/dashboard/broker">Broker</a></li>
+              <li><a class="dropdown-item circularBook" routerLink="/dashboard/reinsurer">Reinsurer</a></li>
             </ul>
           </li>
-          <li><a class="dropdown-item" href="#">Named Insureds</a></li>
+          <li><a class="dropdown-item circularBook" href="#">Named Insureds</a></li>
         </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><b>Reports</b></a>
+        <a class="nav-link circularBold" href="#">Reports</a>
       </li>
     </ul>
     <!-- <div class="row mr-4 text-right"> -->
@@ -48,7 +50,7 @@
       <li class="dropdown notification-list">
         <a class="nav-link dropdown-toggle  waves-effect waves-light" data-toggle="dropdown" href="#" role="button"
           aria-haspopup="false" aria-expanded="false">
-          <i class="dripicons-bell noti-icon" style="color: black;"></i>
+          <i class="dripicons-bell noti-icon" style="color: #eeeeee;"></i>
           <span class="badge badge-pink rounded-circle noti-icon-badge">4</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-lg notification_lists">
@@ -105,10 +107,10 @@
         </div>
       </li>
       <li class="dropdown notification-list mr-4">
-        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#"
-          role="button" aria-haspopup="false" aria-expanded="false">
+        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light circularBold" data-toggle="dropdown"
+          href="#" role="button" aria-haspopup="false" aria-expanded="false">
           <img src="assets/images/user_pf.png" alt="pf" class="rounded-circle">
-          <span class="pro-user-name ml-1" style="color: black;">
+          <span class="pro-user-name ml-1" style="color: #eeeeee;">
             XYZ
           </span>
         </a>

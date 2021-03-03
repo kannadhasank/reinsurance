@@ -5,9 +5,11 @@
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
 }
+
 .dropdown-submenu {
     position:relative;
 }
+
 .dropdown-submenu>.dropdown-menu {
     top: 0;
     left: 100%;
@@ -32,11 +34,12 @@
 }
 
 .vertical-line{
-    border-right: 1px solid #000;
+    border-right: 1px solid #eeeeee;
 }
 
 .nav-link{
     font-size: medium;
+    color: #eeeeee !important;
 }
 
 .dropdown-toggle:after {

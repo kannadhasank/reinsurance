@@ -1,7 +1,5 @@
 <div class="card-box mt-3 mx-2">
-    <div class="text-center">
-        <h2><b>Update Contract</b></h2>
-    </div>
+    <h3 class="pt-1 ml-2 uppercase circularBold"><b>Update Contract</b></h3>
     <hr>
     <div class="container-fluid mt-2">
         <form class="form-horizontal" [formGroup]="updateContractForm">
@@ -114,7 +112,7 @@
             <div class="form-group row">
                 <div class="col-6">
                     <mat-form-field class="example-full-width">
-                        <mat-label>Notes(if any)</mat-label>
+                        <mat-label>Notes (if any)</mat-label>
                         <textarea matInput placeholder="Enter notes"></textarea>
                     </mat-form-field>
                 </div>
@@ -130,7 +128,7 @@
                 <div class="col-md-6 text-right">
                     <button type="button" class="btn btn-orange mr-2" (click)="updateContract()">Update
                         Contract</button>
-                    <button type="button" class="btn btn-secondary">Clear</button>
+                    <button type="button" class="btn btn-secondary" routerLink="/dashboard/contracts">Cancel</button>
                 </div>
             </div>
         </form>

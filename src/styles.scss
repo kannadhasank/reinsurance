@@ -6,6 +6,26 @@
 @import "./assets/css/fyxt-style.css";
 // @import './assets/css/kannan.css';
 
+.circularBold{
+  font-family: CircularBold !important;
+}
+
+.circularBook{
+  font-family: CircularBook !important;
+}
+
+.circularMedium{
+  font-family: CircularMedium !important;
+}
+
+.circularBlack{
+  font-family: CircularBlack !important;
+}
+
+.circularItalic{
+  font-family: CircularItalic !important;
+}
+
 .input-error {
   background-color: #fff;
   border-color: #dc3545 !important;
@@ -18,20 +38,18 @@
   color: #f44336;
 }
 
-.p-inputText {
-  height: 42px !important;
-}
-
 .example-full-width {
   width: 100%;
 }
 
 mat-form-field label {
   font-size: 16px !important;
+  font-family: CircularBook !important;
 }
 
 mat-form-field.mat-form-field-should-float label {
   font-size: 18px !important;
+  font-family: CircularBook !important;
 }
 
 .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-datepicker-toggle-default-icon {
@@ -43,6 +61,17 @@ table {
 }
 
 th{
-  font-size: medium !important;
+  font-size: 14px !important;
   font-weight: bold !important;
+  color: black !important;
+  background-color: #dee2e6 !important;
+  font-family: CircularBold !important;
+}
+
+tr.mat-header-row {
+  height: 40px !important;
+}
+
+.uppercase{
+  text-transform: uppercase !important;
 }

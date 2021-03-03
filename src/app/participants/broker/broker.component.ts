@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { Broker } from 'src/app/models/broker.model';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,9 +15,11 @@ export class BrokerComponent implements OnInit, AfterViewInit {
 
   brokerForm: FormGroup;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   columns: string[] = ['brokerName', 'brokerLocation', 'inCorporationLocation', 'federalID', 'action'];
-  dataSource;
+  dataSource: MatTableDataSource<Broker>;;
   showUpdateBrokerBtn: boolean;
+  brokerdata;
 
   constructor(
     private fb: FormBuilder
@@ -27,28 +32,47 @@ export class BrokerComponent implements OnInit, AfterViewInit {
       'inCorporationLocation': [''],
       'federalID': ['']
     });
-    this.dataSource = [
-      { brokerName: 'Test', brokerLocation: 'Test Loc', inCorporationLocation: 'Test', federalID: 'Test', action: '' },
-      { brokerName: 'Test', brokerLocation: 'Test Loc', inCorporationLocation: 'Test', federalID: 'Test', action: '' },
-      { brokerName: 'Test', brokerLocation: 'Test Loc', inCorporationLocation: 'Test', federalID: 'Test', action: '' }
-    ];
+    this.brokerdata = [
+      {
+        "brokerName": "Test",
+        "brokerLocation": "Test Loc",
+        "inCorporationLocation": "Test",
+        "federalID": "Test"
+      },
+      {
+        "brokerName": "Test 1",
+        "brokerLocation": "Test Loc 1",
+        "inCorporationLocation": "Test",
+        "federalID": "Test 12"
+      }
+    ]
+    this.dataSource = new MatTableDataSource(this.brokerdata);
     this.showUpdateBrokerBtn = false;
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
-  editBroker(){
+  editBroker() {
     this.showUpdateBrokerBtn = true;
   }
 
-  updateBroker(){
+  updateBroker() {
     this.showUpdateBrokerBtn = false;
   }
 
-  deleteBroker(){
+  deleteBroker() {
     Swal.fire('Success', 'Record deleted successfully!', 'success');
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 }

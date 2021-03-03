@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/fonts.css",
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss",
               "node_modules/datatables.net-dt/css/jquery.dataTables.css"
