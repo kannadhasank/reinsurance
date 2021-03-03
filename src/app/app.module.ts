@@ -24,6 +24,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSortModule } from '@angular/material/sort';
 
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
@@ -95,7 +96,8 @@ import { ContractInfoComponent } from './pages/contract-info/contract-info.compo
     MatAutocompleteModule,
     MatRadioModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

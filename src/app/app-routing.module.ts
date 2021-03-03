@@ -12,7 +12,7 @@ import { ReinsurerComponent } from './participants/reinsurer/reinsurer.component
 import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard/contract', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard/contracts', pathMatch: 'full' },
   {
     path: 'dashboard', component: HeaderComponent, children: [
       { path: 'contract', component: ContractComponent },
