@@ -2,15 +2,11 @@
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title">Copy Contract</h4>
+            <h3 class="modal-title circularBold">Copy Contract</h3>
         </div>
         <div class="modal-body">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- <div class="form-group">
-                        <label for="field-3" class="control-label">Contract Name</label>
-                        <input type="text" class="form-control" id="field-3" readonly placeholder="Contract Name">
-                    </div> -->
                     <mat-form-field class="example-full-width">
                         <mat-label>Contract Name</mat-label>
                         <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
@@ -29,19 +25,9 @@
                         <input matInput placeholder="Contract Code" readonly>
                     </mat-form-field>
                 </div>
-                <!-- <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="field-2" class="control-label">Template</label>
-                        <input type="text" class="form-control" id="field-2" placeholder="Template">
-                    </div>
-                </div> -->
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <!-- <div class="form-group">
-                        <label for="field-1" class="control-label">Effective Date</label>
-                        <input type="date" class="form-control" id="field-4" placeholder="John">
-                    </div> -->
                     <mat-form-field appearance="legacy" class="example-full-width">
                         <mat-label>Effective Date</mat-label>
                         <input matInput [matDatepicker]="picker1" readonly>
@@ -50,10 +36,6 @@
                     </mat-form-field>
                 </div>
                 <div class="col-md-6">
-                    <!-- <div class="form-group">
-                        <label for="field-2" class="control-label">Expiration Date</label>
-                        <input type="date" class="form-control" id="field-5" placeholder="Doe">
-                    </div> -->
                     <mat-form-field appearance="legacy" class="example-full-width">
                         <mat-label>Expiration Date</mat-label>
                         <input matInput [matDatepicker]="picker2" readonly>
@@ -62,38 +44,11 @@
                     </mat-form-field>
                 </div>
             </div>
-
-            <!-- <div class="row mb-3">
-                <div class="col-md-12">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" name="layerInclude" id="layerInclude">
-                        <label class="custom-control-label" (click)="IsCopyLayer = !IsCopyLayer" for="layerInclude">Include&nbsp;Layer</label>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="row" *ngIf="IsCopyLayer">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="layer1" id="layer1">
-                                        <label class="custom-control-label" for="layer1"> Layer&nbsp;1</label>
-                                    </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" name="layer2" id="layer2">
-                                        <label class="custom-control-label" for="layer2"> Layer&nbsp;2</label>
-                                    </div>
-                        </div>
-                    </div>
-                </div> -->
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-info waves-effect waves-light" (click)="copyContract()" data-dismiss="modal">Copy Contract</button>
+            <button type="button" class="btn btn-orange waves-effect waves-light" (click)="copyContract()"
+                data-dismiss="modal">Copy Contract</button>
         </div>
     </div>
 </div>

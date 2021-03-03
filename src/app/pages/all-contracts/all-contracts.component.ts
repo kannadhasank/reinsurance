@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { Contract } from 'src/app/models/contract.model';
+import { ContractComponent } from '../contract/contract.component';
 
 @Component({
   selector: 'app-all-contracts',
@@ -9,34 +13,79 @@ import { Router } from '@angular/router';
 })
 export class AllContractsComponent implements OnInit {
 
-  
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  columns: any[] = ['contractCode', 'uwYear', 'formerCode', 'contractName', 'effectiveDate', 'expirationDate', 'status', 'action'];
-  dataSource: any;
+  @ViewChild(MatSort) sort: MatSort;
+  columns: any[] = ['contractCode', 'contractName', 'effectiveDate', 'expirationDate', 'status', 'action'];
+  dataSource: MatTableDataSource<Contract>;
+  contractData;
 
   constructor(
     private router: Router
   ) { }
 
-  ngOnInit(): void {
-    this.dataSource = [
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' },
-      { contractCode: 'CPP-CAT', uwYear: '2020', formerCode: 'Test', contractName: 'Test Contract', effectiveDate: '02/15/2021', expirationDate: '02/16/2022', status: 'Active', action: '' }
+  ngOnInit() {
+    this.contractData = [
+      {
+        "contractCode": "CPP-CAT",
+        "contractName": "Test Contract 1",
+        "effectiveDate": "02/15/2021",
+        "expirationDate": "02/16/2022",
+        "status": "Active"
+      },
+      {
+        "contractCode": "CPP-CAT",
+        "contractName": "Test Contract 2",
+        "effectiveDate": "02/15/2021",
+        "expirationDate": "02/16/2022",
+        "status": "Pending"
+      },
+      {
+        "contractCode": "CPP-CAT",
+        "contractName": "Test Contract 3",
+        "effectiveDate": "02/15/2021",
+        "expirationDate": "02/16/2022",
+        "status": "Active"
+      },
+      {
+        "contractCode": "CPP-CAT",
+        "contractName": "Test Contract 3",
+        "effectiveDate": "02/15/2021",
+        "expirationDate": "02/16/2022",
+        "status": "Active"
+      },
+      {
+        "contractCode": "CPP-CAT",
+        "contractName": "Test Contract 4",
+        "effectiveDate": "02/15/2021",
+        "expirationDate": "02/16/2022",
+        "status": "Active"
+      },
+      {
+        "contractCode": "CPP-CAT",
+        "contractName": "Test Contract 4",
+        "effectiveDate": "02/15/2021",
+        "expirationDate": "02/16/2022",
+        "status": "Active"
+      }
     ];
+    this.dataSource = new MatTableDataSource(this.contractData);
   }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
-  copyContract(){
+  copyContract() {
     this.router.navigate(['/dashboard/create-contract']);
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 }
