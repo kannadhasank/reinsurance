@@ -17,25 +17,27 @@ export class EndorsementComponent implements OnInit, AfterViewInit {
     { columnDef: 'endorsementId', header: 'ID' },
     { columnDef: 'endorsementName', header: 'Name' },
     { columnDef: 'endorsementEffectiveDate', header: 'Endorsement Effective Date' },
-    { columnDef: 'status', header: 'Status' },
-    { columnDef: 'notes', header: 'Notes' },
     { columnDef: 'createdBy', header: 'Created By' },
-    { columnDef: 'approvedBy', header: 'Approved By' }
+    { columnDef: 'approvedBy', header: 'Approved By' },
+    { columnDef: 'status', header: 'Status' },
+    { columnDef: 'notes', header: 'Notes' }
   ];
   dataSource: MatTableDataSource<Endorsement>;
   endorsementData: any[];
   displayedColumns = this.columns.map(c => c.columnDef);
+  showShortDescription: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.showShortDescription = true;
     this.endorsementData = [
       {
         "endorsementId": "Test",
         "endorsementName": "Test Name",
         "endorsementEffectiveDate": "3/4/2021",
         "status": "Approved",
-        "notes": "Test Notes Description",
+        "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad excepturi hic perferendis nobis nesciunt quod dignissimos praesentium aliquid mollitia odio, ipsum itaque ducimus laudantium eaque dolorem. Veritatis, repudiandae vero? a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         "createdBy": "TES001",
         "approvedBy": "TES003"
       },
