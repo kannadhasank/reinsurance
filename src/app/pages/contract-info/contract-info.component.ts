@@ -9,7 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContractInfoComponent implements OnInit {
 
   contractForm: FormGroup;
-  showUpdateBtn: boolean;
+  affiliateID;
+  //showUpdateBtn: boolean;
 
   constructor(
     private fb: FormBuilder
@@ -28,18 +29,19 @@ export class ContractInfoComponent implements OnInit {
       aggregatedClaimMethod: [''],
       reasonForUpdate: ['', [Validators.required]]
     });
-    this.showUpdateBtn = false;
+    this.affiliateID = 'option3';
+  //  this.showUpdateBtn = false;
     this.contractForm.disable();
   }
 
-  editContract() {
-    this.contractForm.enable();
-    this.showUpdateBtn = true;
-  }
+  // editContract() {
+  //   this.contractForm.enable();
+  //   this.showUpdateBtn = true;
+  // }
 
-  updateContract() {
-    this.showUpdateBtn = false;
-    this.contractForm.disable();
-  }
+  // updateContract() {
+  //   this.showUpdateBtn = false;
+  //   this.contractForm.disable();
+  // }
 
 }

@@ -35,7 +35,7 @@ export class AllContractsComponent implements OnInit {
     this.contractData = [
       {
         "contractCode": "CPP-CAT",
-        "contractName": "Test Contract 1",
+        "contractName": "Test Contract 1 Equipment CPP Test Contract",
         "effectiveDate": "02/15/2022",
         "expirationDate": "02/16/2022",
         "status": "Active"
