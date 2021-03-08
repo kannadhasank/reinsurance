@@ -16,10 +16,17 @@ export class BrokerComponent implements OnInit, AfterViewInit {
   brokerForm: FormGroup;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  columns: string[] = ['brokerName', 'brokerLocation', 'inCorporationLocation', 'federalID', 'action'];
-  dataSource: MatTableDataSource<Broker>;;
+  columns = [
+    {columnDef: 'brokerName', header: 'Broker Name'},
+    {columnDef: 'brokerLocation', header: 'Broker Location'},
+    {columnDef: 'inCorporationLocation', header: 'Incorporation Location'},
+    {columnDef: 'federalID', header: 'Federal ID'},
+    {columnDef: 'action', header: 'Action'}
+  ];
+  dataSource: MatTableDataSource<Broker>;
   showUpdateBrokerBtn: boolean;
   brokerdata;
+  displayedColumns = this.columns.map(c => c.columnDef);
 
   constructor(
     private fb: FormBuilder

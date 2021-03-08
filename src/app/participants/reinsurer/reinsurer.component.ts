@@ -17,10 +17,18 @@ export class ReinsurerComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   dataSource: MatTableDataSource<Reinsurer>;;
-  columns: string[] = ['reinsurerName', 'reinsurerLocation', 'reinsurerCorporationLocation', 'federalID', 'action'];
-  showUpdateRIBtn: string;
+  columns = [
+    {columnDef: 'reinsurerName', header: 'Reinsurer Name'},
+    {columnDef: 'reinsurerLocation', header: 'Reinsurer Location'},
+    {columnDef: 'reinsurerCorporationLocation', header: 'Reinsurer Corporation Location'},
+    {columnDef: 'federalID', header: 'Federal ID'},
+    {columnDef: 'naiccode', header: 'NAIC Code'},
+    {columnDef: 'action', header: 'Action'}
+  ];
+  showUpdateRIBtn: boolean;
   reinsurerData: any;
-
+  displayedColumns = this.columns.map(c => c.columnDef);
+  
   constructor(
     private fb: FormBuilder
   ) { }
@@ -30,24 +38,27 @@ export class ReinsurerComponent implements OnInit, AfterViewInit {
       'reinsurerName': [''],
       'reinsurerLocation': [''],
       'reinsurerCorporationLocation': [''],
-      'federalID': ['']
+      'federalID': [''],
+      'naiccode': ['']
     });
     this.reinsurerData = [
       {
         "reinsurerName": "Test",
         "reinsurerLocation": "Test Loc",
         "reinsurerCorporationLocation": "Test",
-        "federalID": "Test"
+        "federalID": "Test",
+        "naiccode": "XYZ"
       },
       {
         "reinsurerName": "Test 1",
         "reinsurerLocation": "Test Loc 1",
         "reinsurerCorporationLocation": "Test",
-        "federalID": "Test 12"
+        "federalID": "Test 12",
+        "naiccode": "ABC"
       }
     ]
     this.dataSource = new MatTableDataSource(this.reinsurerData);
-    this.showUpdateRIBtn = 'Add';
+    this.showUpdateRIBtn = false;
   }
 
   ngAfterViewInit() {
@@ -56,11 +67,11 @@ export class ReinsurerComponent implements OnInit, AfterViewInit {
   }
 
   editReInsurer() {
-    this.showUpdateRIBtn = 'Update';
+    this.showUpdateRIBtn = true;
   }
 
   updateReinsurer() {
-    this.showUpdateRIBtn = 'Add';
+    this.showUpdateRIBtn = false;
   }
 
   deleteReinsurer() {

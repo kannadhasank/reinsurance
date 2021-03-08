@@ -17,7 +17,8 @@
           Contract</a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <li><a class="dropdown-item circularBook" routerLink="/dashboard/create-contract">Create Contract</a></li>
-          <li><a class="dropdown-item circularBook" routerLink="/dashboard/contracts">Open Contract</a></li>
+          <li><a class="dropdown-item circularBook" data-toggle="modal" data-target="#open-contract">Open Contract</a>
+          </li>
           <li><a class="dropdown-item circularBook" data-toggle="modal" data-target="#copy-contract">Copy Contract</a>
           </li>
           <li><a class="dropdown-item circularBook" routerLink="/dashboard/contracts">Contract Dashboard</a></li>
@@ -38,7 +39,7 @@
               <li><a class="dropdown-item circularBook" routerLink="/dashboard/reinsurer">Reinsurer</a></li>
             </ul>
           </li>
-          <li><a class="dropdown-item circularBook" href="#">Named Insureds</a></li>
+          <li><a class="dropdown-item circularBook" routerLink="/dashboard/named-insured-master">Named Insureds</a></li>
         </ul>
       </li>
       <li class="nav-item">
@@ -137,5 +138,11 @@
 <ng-container>
   <div id="copy-contract" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <app-copy-contract></app-copy-contract>
+  </div>
+</ng-container>
+
+<ng-container>
+  <div id="open-contract" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <app-open-contract></app-open-contract>
   </div>
 </ng-container>

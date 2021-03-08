@@ -25,7 +25,7 @@ export class UpdateContractComponent implements OnInit {
   //showErrorValidationMsg: string;
 
   constructor(
-    public fb: FormBuilder
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {

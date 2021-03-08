@@ -3,4 +3,5 @@ export interface Reinsurer {
     reinsurerLocation: string;
     reinsurerCorporationLocation: string;
     federalID: string;
+    naiccode: string;
 }

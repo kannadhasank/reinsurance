@@ -15,9 +15,17 @@ export class AllContractsComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  columns: any[] = ['contractCode', 'contractName', 'effectiveDate', 'expirationDate', 'status', 'action'];
+  columns = [
+    { columnDef: 'contractCode', header: 'Contract Code' },
+    { columnDef: 'contractName', header: 'Contract Name' },
+    { columnDef: 'effectiveDate', header: 'Effective Date' },
+    { columnDef: 'expirationDate', header: 'Expiration Date' },
+    { columnDef: 'status', header: 'Status' },
+    { columnDef: 'action', header: 'Action' }
+  ];
   dataSource: MatTableDataSource<Contract>;
   contractData;
+  displayedColumns = this.columns.map(c => c.columnDef);
 
   constructor(
     private router: Router
@@ -28,7 +36,7 @@ export class AllContractsComponent implements OnInit {
       {
         "contractCode": "CPP-CAT",
         "contractName": "Test Contract 1",
-        "effectiveDate": "02/15/2021",
+        "effectiveDate": "02/15/2022",
         "expirationDate": "02/16/2022",
         "status": "Active"
       },
