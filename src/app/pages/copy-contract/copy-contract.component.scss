@@ -1,0 +1,9 @@
+::ng-deep .cdk-overlay-container{
+    z-index: 1200 !important;
+}
+
+::ng-deep.mat-form-field-disabled .mat-form-field-underline { 
+    background-image: linear-gradient( to right, rgb(44, 44, 44) 0, rgba(0, 0, 0, 0.42) 33%, #c2c7cc 0 ) !important; 
+    background-size: 1px 100% !important;
+    border-bottom: 1px solid; 
+}

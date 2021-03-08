@@ -10,6 +10,9 @@ import { UpdateContractComponent } from './pages/update-contract/update-contract
 import { BrokerComponent } from './participants/broker/broker.component';
 import { ReinsurerComponent } from './participants/reinsurer/reinsurer.component';
 import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
+import { NamedInsuredComponent } from './pages/layers/named-insured/named-insured.component';
+import { NamedInsuredMasterComponent } from './pages/named-insured-master/named-insured-master.component';
+import { EndorsementComponent } from './pages/endorsement/endorsement.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard/contracts', pathMatch: 'full' },
@@ -22,7 +25,9 @@ const routes: Routes = [
       { path: 'contract-info', component: ContractInfoComponent },
       { path: 'update-contract', component: UpdateContractComponent },
       { path: 'broker', component: BrokerComponent },
-      { path: 'reinsurer', component: ReinsurerComponent }
+      { path: 'reinsurer', component: ReinsurerComponent },
+      { path: 'named-insured-master', component: NamedInsuredMasterComponent },
+      { path: 'endorsement', component: EndorsementComponent }
     ]
   },
 

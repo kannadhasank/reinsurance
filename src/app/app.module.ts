@@ -46,6 +46,9 @@ import { TermsComponent } from './pages/layers/terms/terms.component';
 import { AttachementGuidelinesComponent } from './pages/layers/attachement-guidelines/attachement-guidelines.component';
 import { NamedInsuredComponent } from './pages/layers/named-insured/named-insured.component';
 import { ContractInfoComponent } from './pages/contract-info/contract-info.component';
+import { NamedInsuredMasterComponent } from './pages/named-insured-master/named-insured-master.component';
+import { EndorsementComponent } from './pages/endorsement/endorsement.component';
+import { OpenContractComponent } from './pages/open-contract/open-contract.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { ContractInfoComponent } from './pages/contract-info/contract-info.compo
     TermsComponent,
     AttachementGuidelinesComponent,
     NamedInsuredComponent,
-    ContractInfoComponent
+    ContractInfoComponent,
+    NamedInsuredMasterComponent,
+    EndorsementComponent,
+    OpenContractComponent
   ],
   imports: [
     AppRoutingModule,

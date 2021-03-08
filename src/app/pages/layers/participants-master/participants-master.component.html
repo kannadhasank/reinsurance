@@ -3,7 +3,7 @@
     <div class="col-6">
       <mat-form-field appearance="legacy" class="example-full-width">
         <mat-label>Participant Name</mat-label>
-        <mat-select>
+        <mat-select disableOptionCentering panelClass="selectCase">
           <mat-option value="option">Option 1</mat-option>
           <mat-option value="option">Option 2</mat-option>
           <mat-option value="option">Option 3</mat-option>
@@ -46,8 +46,9 @@
             <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column | uppercase}} </th>
             <td mat-cell *matCellDef="let element">
               <div class="row">
-                <a href="javascript:void(0)" (click)="editParticipant()"><i class="mdi mdi-pencil mr-2 ml-1"></i></a>
-                <a href="javascript:void(0)"><i class="mdi mdi-delete"></i></a>
+                <a href="javascript:void(0)" (click)="editParticipant()"><i
+                    class="mdi mdi-pencil mr-2 ml-2 editBtn"></i></a>
+                <a href="javascript:void(0)"><i class="mdi mdi-delete deleteBtn"></i></a>
               </div>
             </td>
           </ng-container>
